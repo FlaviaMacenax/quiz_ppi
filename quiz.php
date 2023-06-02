@@ -19,8 +19,6 @@ $respostas = array(
 );
 
 
-$posi = 0;
-$msg = "";
 $msg = "";
 
 
@@ -33,8 +31,6 @@ if(isset($_POST["responder"])){
         }else{
             $msg = "Resposta Incorreta. Tente novamente!";
         }
-
-
 }
 
 
