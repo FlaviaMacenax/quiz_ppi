@@ -23,7 +23,7 @@
     </div>
 
     <div class="texto-apresentacao">
-        <h2>O quanto você sabe sobre a cantora americana Taylor Swift ?</h2>
+        <h2>O quanto você sabe sobre a cantora americana Taylor Swift?</h2>
     </div>
 </section>
  
