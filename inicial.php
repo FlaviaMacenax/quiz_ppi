@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"  type="image/x-icon" href="imagens/logo.png">
     <link rel="stylesheet" type="text/css" href="estilo_quiz.css" />
     <title>O quanto você sabe sobre Taylor Swift?</title>
 </head>
@@ -11,7 +12,7 @@
     <!-- Cabeçalho -->
     <header class="container">
       <div class="logo">
-        <img src="imagens/rascunhos.png" width="200" height="106" alt="logo do quiz">
+        <img src="imagens/logo.png" width="200" height="106" alt="logo do quiz">
       </div> 
     </header>
 
@@ -52,9 +53,22 @@
           <a href="creditos.php"><img src="imagens/créditos.png" width="100px" height="auto" alt="ícone de créditos"></a>
           CRÉDITOS
       </div>
-
   </div>
 </section>
+
+<!-- Rodapé -->
+<footer>
+  <div class="dev">
+    <p>Desenvolvido por:  <br>
+        Flávia Jamily - 📧flavia.macena@escolar.ifrn.edu.br <br>
+        Isabel Natalia - 📧isabel.natalia@escolar.ifrn.edu.br <br>
+        Sarah Lima - 📧lima.sarah@escolar.ifrn.edu.br</p> 
+  
+    <p>Trabalho realizado para a disciplina de programação para internet <br>
+        Professor: Éberton Marinho <br>
+        Unidade 1
+    </p> </div>
+</footer>
 
 </body>
 </html>
