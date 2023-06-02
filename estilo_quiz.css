@@ -1,0 +1,59 @@
+.container{
+    max-width: 830px;
+    margin: auto;
+}
+
+header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.secao-1{
+    display: flex;
+    margin-top: 100px;
+   }
+
+   .texto-apresentacao h2{
+    font-size: 40px;
+    color: black;
+   }
+
+   .apresentacao img{
+    margin-right: 50px;
+   }
+
+   .secao-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 75px;
+   }
+
+   .secao-2 h2{
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+   }
+
+   .topicos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 25px;
+   }
+
+   .topico{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #92a2e8;
+    width: 200px;
+    height: 180px;
+    border-radius: 10px;
+    color: black;
+    margin-bottom: 40px;
+   }
