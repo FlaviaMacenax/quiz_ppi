@@ -1,4 +1,7 @@
 <?php
+
+
+
 $perguntas = array ("Qual a idade dela?", "Quando ela nasceu?", "Qual o apelido que os fãs brasileiros deram à Taylor Swift?",
 "Quantos álbuns de estúdio da Taylor foram lançados até agora?", "Qual é o nome do primeiro álbum da cantora?
 ", "Qual foi o último relacionamento da Taylor?", "Qual foi o álbum mais vendido da Taylor?",
@@ -33,11 +36,7 @@ if(isset($_POST["responder"])){
         }
 }
 
-
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -58,9 +57,10 @@ if(isset($_POST["responder"])){
     <input type="radio" name="respostas" value="e"><?php echo($respostas[0][2])?></br>
     <input type="radio" name="respostas" value="c"><?php echo($respostas[0][3])?></br>
     <input type="submit" name="responder" class="botao" value="Responder">
+    <a href="#p2"><input type="submit" name="Próxima" class="botao" value="Próxima"></a>
     <?php echo $msg?>
     </form>
-   
+
 
 
 
@@ -73,9 +73,10 @@ if(isset($_POST["responder"])){
     <input type="radio" name="respostas" value="e"><?php echo($respostas[1][2])?></br>
     <input type="radio" name="respostas" value="e"><?php echo($respostas[1][3])?></br>
     <input type="submit" name="responder" class="botao" value="Responder">
+    <input type="submit" name="Próxima" class="botao" value="Próxima">
     <?php echo $msg?>
     </form>
-
+ 
 
     <form action="quiz.php" method="post">
     <h1>Pergunta 3</h1>
@@ -85,6 +86,7 @@ if(isset($_POST["responder"])){
     <input type="radio" name="respostas" value="2"><?php echo($respostas[2][2])?></br>
     <input type="radio" name="respostas" value="3"><?php echo($respostas[2][3])?></br>
     <input type="submit" name="responder" class="botao" value="Responder">
+    <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
 
 
@@ -98,6 +100,7 @@ if(isset($_POST["responder"])){
     <input type="radio" name="respostas" value="2"><?php echo($respostas[3][2])?></br>
     <input type="radio" name="respostas" value="3"><?php echo($respostas[3][3])?></br>
     <input type="submit" name="responder" class="botao" value="Responder">
+    <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
 
 
@@ -111,6 +114,7 @@ if(isset($_POST["responder"])){
     <input type="radio" name="respostas" value="2"><?php echo($respostas[4][2])?></br>
     <input type="radio" name="respostas" value="3"><?php echo($respostas[4][3])?></br>
     <input type="submit" name="responder" class="botao" value="Responder">
+    <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
 
 
@@ -124,6 +128,7 @@ if(isset($_POST["responder"])){
     <input type="radio" name="respostas" value="2"><?php echo($respostas[5][2])?></br>
     <input type="radio" name="respostas" value="3"><?php echo($respostas[5][3])?></br>
     <input type="submit" name="responder" class="botao" value="Responder">
+    <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
 
 
@@ -137,6 +142,7 @@ if(isset($_POST["responder"])){
     <input type="radio" name="respostas" value="2"><?php echo($respostas[6][2])?></br>
     <input type="radio" name="respostas" value="3"><?php echo($respostas[6][3])?></br>
     <input type="submit" name="responder" class="botao" value="Responder">
+    <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
 
 
@@ -150,6 +156,7 @@ if(isset($_POST["responder"])){
     <input type="radio" name="respostas" value="2"><?php echo($respostas[7][2])?></br>
     <input type="radio" name="respostas" value="3"><?php echo($respostas[7][3])?></br>
     <input type="submit" name="responder" class="botao" value="Responder">
+    <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
 
 
@@ -163,6 +170,7 @@ if(isset($_POST["responder"])){
     <input type="radio" name="respostas" value="2"><?php echo($respostas[8][2])?></br>
     <input type="radio" name="respostas" value="3"><?php echo($respostas[8][3])?></br>
     <input type="submit" name="responder" class="botao" value="Responder">
+    <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
 
 
@@ -176,6 +184,7 @@ if(isset($_POST["responder"])){
     <input type="radio" name="respostas" value="2"><?php echo($respostas[9][2])?></br>
     <input type="radio" name="respostas" value="3"><?php echo($respostas[9][3])?></br>
     <input type="submit" name="responder" class="botao" value="Responder">
+    <input type="submit" name="Resultado" class="botao" value="Resultado">
     </form>
 </body>
 </html>
