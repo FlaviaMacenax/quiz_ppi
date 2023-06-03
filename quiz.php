@@ -119,8 +119,8 @@ if(isset($_POST["responder"])){
 <body>
 
 
-    <form action="quiz.php" method="post">
-        <?php echo "Jogador: " . $_SESSION["nomeJogador"];?>
+    <form action="quiz.php" method="post"><br>
+        <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 1</h1>
     <h2><?php echo $perguntas[0]?></h2>
     <input type="radio" name="res1" value="27"><?php echo($respostas[0][0])?></br>
@@ -134,8 +134,8 @@ if(isset($_POST["responder"])){
 
 
 
-    <form action="quiz.php" method="post">
-    <?php echo "Jogador: " . $_SESSION["nomeJogador"];?>
+    <form action="quiz.php" method="post"><br>
+    <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 2</h1>
     <h2><?php echo $perguntas[1]?></h2>
     <input type="radio" name="res2" value="13 de dezembro"><?php echo($respostas[1][0])?></br>
@@ -147,8 +147,8 @@ if(isset($_POST["responder"])){
     </form>
     <?php echo $msg?>
 
-    <form action="quiz.php" method="post">
-    <?php echo "Jogador: " . $_SESSION["nomeJogador"];?>
+    <form action="quiz.php" method="post"><br>
+    <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 3</h1>
     <h2><?php echo $perguntas[2]?></h2>
     <input type="radio" name="res3" value="loirinha"><?php echo($respostas[2][0])?></br>
@@ -162,8 +162,8 @@ if(isset($_POST["responder"])){
 
 
 
-    <form action="quiz.php" method="post">
-    <?php echo "Jogador: " . $_SESSION["nomeJogador"];?>
+    <form action="quiz.php" method="post"><br>
+    <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 4</h1>
     <h2><?php echo $perguntas[3]?></h2>
     <input type="radio" name="res4" value="13"><?php echo($respostas[3][0])?></br>
@@ -177,8 +177,8 @@ if(isset($_POST["responder"])){
 
 
 
-    <form action="quiz.php" method="post">
-    <?php echo "Jogador: " . $_SESSION["nomeJogador"];?>
+    <form action="quiz.php" method="post"><br>
+    <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 5</h1>
     <h2><?php echo $perguntas[4]?></h2>
     <input type="radio" name="res5" value="Taylor Swift"><?php echo($respostas[4][0])?></br>
@@ -192,8 +192,8 @@ if(isset($_POST["responder"])){
 
 
 
-    <form action="quiz.php" method="post">
-    <?php echo "Jogador: " . $_SESSION["nomeJogador"];?>
+    <form action="quiz.php" method="post"><br>
+    <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 6</h1>
     <h2><?php echo $perguntas[5]?></h2>
     <input type="radio" name="res6" value="Harry Styles"><?php echo($respostas[5][0])?></br>
@@ -207,8 +207,8 @@ if(isset($_POST["responder"])){
 
 
 
-    <form action="quiz.php" method="post">
-    <?php echo "Jogador: " . $_SESSION["nomeJogador"];?>
+    <form action="quiz.php" method="post"><br>
+    <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 7</h1>
     <h2><?php echo $perguntas[6]?></h2>
     <input type="radio" name="res7" value="Folklore"><?php echo($respostas[6][0])?></br>
@@ -222,8 +222,8 @@ if(isset($_POST["responder"])){
 
 
 
-    <form action="quiz.php" method="post">
-    <?php echo "Jogador: " . $_SESSION["nomeJogador"];?>
+    <form action="quiz.php" method="post"><br>
+    <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 8</h1>
     <h2><?php echo $perguntas[7]?></h2>
     <input type="radio" name="res8" value="Taylor swift tour"><?php echo($respostas[7][0])?></br>
@@ -237,8 +237,8 @@ if(isset($_POST["responder"])){
 
 
 
-    <form action="quiz.php" method="post">
-    <?php echo "Jogador: " . $_SESSION["nomeJogador"];?>
+    <form action="quiz.php" method="post"><br>
+    <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 9</h1>
     <h2><?php echo $perguntas[8]?></h2>
     <input type="radio" name="res9" value="10"><?php echo($respostas[8][0])?></br>
@@ -252,8 +252,8 @@ if(isset($_POST["responder"])){
 
 
 
-    <form action="quiz.php" method="post">
-    <?php echo "Jogador: " . $_SESSION["nomeJogador"];?>
+    <form action="quiz.php" method="post"><br>
+    <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 10</h1>
     <h2><?php echo $perguntas[9]?></h2>
     <input type="radio" name="res10" value="7"><?php echo($respostas[9][0])?></br>
