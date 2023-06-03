@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+$nomeJogador = "";
+
+if(isset($_POST["nomeJogador"])){
+  $nomeJogador = $_POST["nomeJogador"];
+  $_SESSION ["nomeJogador"] = $nomeJogador;
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -29,9 +41,9 @@
  
 <!--Cadastro do nome do jogador-->
 <section class="cadastro container">
-    <form action="inicial.php" method="post" ></form>
-    Qual seu nome? <input type="text" name="nome">
-    <button type= "submit" name= "enviar">Enviar</button>
+    <form action="inicial.php" method="post" >
+    Qual seu nome? <input type="text" name="nomeJogador">
+    <button type= "submit" name= "enviar">Enviar</button></form>
 </section>
 
 <!-- Opções do menu-->

@@ -1,5 +1,5 @@
 <?php
-
+section_start();
 
 
 $perguntas = array ("Qual a idade dela?", "Quando ela nasceu?", "Qual o apelido que os fãs brasileiros deram à Taylor Swift?",
@@ -122,6 +122,7 @@ if(isset($_POST["responder"])){
 
     <form action="quiz.php" method="post">
     <h1>Pergunta 1</h1>
+    <?php echo "Jogador: " .$SESSION["nomeJogador"]?>
     <h2><?php echo $perguntas[0]?></h2>
     <input type="radio" name="res1" value="27"><?php echo($respostas[0][0])?></br>
     <input type="radio" name="res1" value="30"><?php echo($respostas[0][1])?></br>
