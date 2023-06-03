@@ -2,12 +2,16 @@
 session_start();
 
 $nomeJogador = "";
+$msg = "";
 
+if(isset($_POST["enviar"])){
+  $botao = $_POST["enviar"];
+  
 if(isset($_POST["nomeJogador"])){
   $nomeJogador = $_POST["nomeJogador"];
   $_SESSION ["nomeJogador"] = $nomeJogador;
 }
-
+}
 ?>
 
 
@@ -44,9 +48,10 @@ if(isset($_POST["nomeJogador"])){
 <section class="cadastro container">
     <form action="inicial.php" method="post" >
     Qual seu nome? <input type="text" name="nomeJogador">
-    <a href="quiz.php"><button type= "submit" name= "enviar">Enviar</button></a>
+    <button type= "submit" name= "enviar">Enviar</button>
     </form>
-</section>
+  
+  </section>
 
 <!-- Opções do menu-->
 <section class="secao-2 container">
