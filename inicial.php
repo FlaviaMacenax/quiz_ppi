@@ -7,6 +7,7 @@ if(isset($_POST["nomeJogador"])){
   $nomeJogador = $_POST["nomeJogador"];
   $_SESSION ["nomeJogador"] = $nomeJogador;
 }
+
 ?>
 
 
@@ -42,8 +43,8 @@ if(isset($_POST["nomeJogador"])){
 <!--Cadastro do nome do jogador-->
 <section class="cadastro container">
     <form action="inicial.php" method="post" >
-    Qual seu nome? <input type="text" name="nomeJogador">
-    <button type= "submit" name= "enviar">Enviar</button></form>
+    Qual seu nome? <input type="text" name="nomeJogador"></form>
+    <a href="quiz.php"><button type= "submit" name= "enviar">Enviar</button></a>
 </section>
 
 <!-- Opções do menu-->
