@@ -43,8 +43,9 @@ if(isset($_POST["nomeJogador"])){
 <!--Cadastro do nome do jogador-->
 <section class="cadastro container">
     <form action="inicial.php" method="post" >
-    Qual seu nome? <input type="text" name="nomeJogador"></form>
+    Qual seu nome? <input type="text" name="nomeJogador">
     <a href="quiz.php"><button type= "submit" name= "enviar">Enviar</button></a>
+    </form>
 </section>
 
 <!-- Opções do menu-->
