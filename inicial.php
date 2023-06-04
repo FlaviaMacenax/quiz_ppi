@@ -1,3 +1,20 @@
+<?php
+session_start();
+
+$nomeJogador = "";
+$msg = "";
+
+if(isset($_POST["enviar"])){
+  $botao = $_POST["enviar"];
+  
+if(isset($_POST["nomeJogador"])){
+  $nomeJogador = $_POST["nomeJogador"];
+  $_SESSION ["nomeJogador"] = $nomeJogador;
+}
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -32,10 +49,12 @@
  
 <!--Cadastro do nome do jogador-->
 <section class="cadastro container">
-    <form action="inicial.php" method="post" ></form>
-    Qual seu nome? <input type="text" name="nome">
+    <form action="inicial.php" method="post" >
+    Qual seu nome? <input type="text" name="nomeJogador">
     <button type= "submit" name= "enviar">Enviar</button>
-</section>
+    </form>
+  
+  </section>
 
 <!-- Opções do menu-->
 <section class="secao-2 container">

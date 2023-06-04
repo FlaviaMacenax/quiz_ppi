@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 
 $perguntas = array ("Qual a idade dela?", "Quando ela nasceu?", "Qual o apelido que os fãs brasileiros deram à Taylor Swift?",
@@ -25,16 +25,85 @@ $respostas = array(
 $msg = "";
 
 
+
 if(isset($_POST["responder"])){
     $botao = $_POST["responder"];
-
-
-        if($_POST["respostas"] == "c"){
-            $msg = "Resposta Correta. Parabéns!";
+    //validação das respostas
+    if(isset($_POST["res1"])){
+        if($_POST["res1"] == "33") {
+            $msg = "Parabéns, você acertou!";
         }else{
-            $msg = "Resposta Incorreta. Tente novamente!";
+            $msg = "Que pena, você errou!";
         }
+    }
+    if(isset($_POST["res2"])){
+        if($_POST["res2"] == "13 de dezembro") {
+        $msg = "Parabéns, você acertou!" ;
+        }else{
+            $msg = "Que pena, você errou!";
+        }
+    }
+    if(isset($_POST["res3"])){
+        if($_POST["res3"] == "loirinha") {
+            $msg = "Parabéns, você acertou!";
+        }else{
+            $msg = "Que pena, você errou!";
+        }
+    }
+    if(isset($_POST["res4"])){
+        if($_POST["res4"] == "10") {
+            $msg = "Parabéns, você acertou!";
+        }else{
+            $msg = "Que pena, você errou!";
+        }
+    }
+    if(isset($_POST["res5"])){
+        if($_POST["res5"] == "Taylor Swift") {
+            $msg = "Parabéns, você acertou!";
+        }else{
+            $msg = "Que pena, você errou!";
+        }
+    }
+    if(isset($_POST["res6"])){
+        if($_POST["res6"] == "Joe Alwyn") {
+            $msg = "Parabéns, você acertou!";
+        }else{
+            $msg = "Que pena, você errou!";
+        }
+    }
+    if(isset($_POST["res7"])){
+        if($_POST["res7"] == "Midnights") {
+            $msg = "Parabéns, você acertou!";
+        }else{
+            $msg = "Que pena, você errou!";
+        }
+    }
+    if(isset($_POST["res8"])){
+        if($_POST["res8"] == "The eras tour") {
+            $msg = "Parabéns, você acertou!";
+        }else{
+            $msg = "Que pena, você errou!";
+        }
+    }
+    if(isset($_POST["res9"])){
+        if($_POST["res9"] == "13") {
+            $msg = "Parabéns, você acertou!";
+        }else{
+            $msg = "Que pena, você errou!";
+        }
+    }
+    if(isset($_POST["res10"])){
+        if($_POST["res10"] == "12") {
+            $msg = "Parabéns, você acertou!";
+        }else{
+            $msg = "Que pena, você errou!";
+        }
+    }
+    
 }
+
+
+
 
 ?>
 
@@ -50,142 +119,150 @@ if(isset($_POST["responder"])){
 <body>
 
 
-    <form action="quiz.php" method="post">
+    <form action="quiz.php" method="post"><br>
+        <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 1</h1>
     <h2><?php echo $perguntas[0]?></h2>
-    <input type="radio" name="respostas" value="e"><?php echo($respostas[0][0])?></br>
-    <input type="radio" name="respostas" value="e"><?php echo($respostas[0][1])?></br>
-    <input type="radio" name="respostas" value="e"><?php echo($respostas[0][2])?></br>
-    <input type="radio" name="respostas" value="c"><?php echo($respostas[0][3])?></br>
+    <input type="radio" name="res1" value="27"><?php echo($respostas[0][0])?></br>
+    <input type="radio" name="res1" value="30"><?php echo($respostas[0][1])?></br>
+    <input type="radio" name="res1" value="33"><?php echo($respostas[0][2])?></br>
+    <input type="radio" name="res1" value="36"><?php echo($respostas[0][3])?></br>
     <input type="submit" name="responder" class="botao" value="Responder">
-    <a href="#p2"><input type="submit" name="Próxima" class="botao" value="Próxima"></a>
-    <?php echo $msg?>
+    <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
+    <?php echo $msg?>
 
 
 
-
-
-    <form action="quiz.php" method="post">
+    <form action="quiz.php" method="post"><br>
+    <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 2</h1>
     <h2><?php echo $perguntas[1]?></h2>
-    <input type="radio" name="respostas" value="e"><?php echo($respostas[1][0])?></br>
-    <input type="radio" name="respostas" value="c"><?php echo($respostas[1][1])?></br>
-    <input type="radio" name="respostas" value="e"><?php echo($respostas[1][2])?></br>
-    <input type="radio" name="respostas" value="e"><?php echo($respostas[1][3])?></br>
+    <input type="radio" name="res2" value="13 de dezembro"><?php echo($respostas[1][0])?></br>
+    <input type="radio" name="res2" value="27 de março"><?php echo($respostas[1][1])?></br>
+    <input type="radio" name="res2" value="23 de outubro"><?php echo($respostas[1][2])?></br>
+    <input type="radio" name="res2" value="17 de fevereiro"><?php echo($respostas[1][3])?></br>
     <input type="submit" name="responder" class="botao" value="Responder">
     <input type="submit" name="Próxima" class="botao" value="Próxima">
-    <?php echo $msg?>
     </form>
- 
+    <?php echo $msg?>
 
-    <form action="quiz.php" method="post">
+    <form action="quiz.php" method="post"><br>
+    <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 3</h1>
     <h2><?php echo $perguntas[2]?></h2>
-    <input type="radio" name="respostas" value="0"><?php echo($respostas[2][0])?></br>
-    <input type="radio" name="respostas" value="1"><?php echo($respostas[2][1])?></br>
-    <input type="radio" name="respostas" value="2"><?php echo($respostas[2][2])?></br>
-    <input type="radio" name="respostas" value="3"><?php echo($respostas[2][3])?></br>
+    <input type="radio" name="res3" value="loirinha"><?php echo($respostas[2][0])?></br>
+    <input type="radio" name="res3" value="loirona"><?php echo($respostas[2][1])?></br>
+    <input type="radio" name="res3" value="lourena"><?php echo($respostas[2][2])?></br>
+    <input type="radio" name="res3" value="loucona"><?php echo($respostas[2][3])?></br>
     <input type="submit" name="responder" class="botao" value="Responder">
     <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
+    <?php echo $msg?>
 
 
 
-
-    <form action="quiz.php" method="post">
+    <form action="quiz.php" method="post"><br>
+    <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 4</h1>
     <h2><?php echo $perguntas[3]?></h2>
-    <input type="radio" name="respostas" value="0"><?php echo($respostas[3][0])?></br>
-    <input type="radio" name="respostas" value="1"><?php echo($respostas[3][1])?></br>
-    <input type="radio" name="respostas" value="2"><?php echo($respostas[3][2])?></br>
-    <input type="radio" name="respostas" value="3"><?php echo($respostas[3][3])?></br>
+    <input type="radio" name="res4" value="13"><?php echo($respostas[3][0])?></br>
+    <input type="radio" name="res4" value="10"><?php echo($respostas[3][1])?></br>
+    <input type="radio" name="res4" value="7"><?php echo($respostas[3][2])?></br>
+    <input type="radio" name="res4" value="5"><?php echo($respostas[3][3])?></br>
     <input type="submit" name="responder" class="botao" value="Responder">
     <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
+    <?php echo $msg?>
 
 
 
-
-    <form action="quiz.php" method="post">
+    <form action="quiz.php" method="post"><br>
+    <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 5</h1>
     <h2><?php echo $perguntas[4]?></h2>
-    <input type="radio" name="respostas" value="0"><?php echo($respostas[4][0])?></br>
-    <input type="radio" name="respostas" value="1"><?php echo($respostas[4][1])?></br>
-    <input type="radio" name="respostas" value="2"><?php echo($respostas[4][2])?></br>
-    <input type="radio" name="respostas" value="3"><?php echo($respostas[4][3])?></br>
+    <input type="radio" name="res5" value="Taylor Swift"><?php echo($respostas[4][0])?></br>
+    <input type="radio" name="res5" value="Reputation"><?php echo($respostas[4][1])?></br>
+    <input type="radio" name="res5" value="Lover"><?php echo($respostas[4][2])?></br>
+    <input type="radio" name="res5" value="Evermore"><?php echo($respostas[4][3])?></br>
     <input type="submit" name="responder" class="botao" value="Responder">
     <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
+    <?php echo $msg?>
 
 
 
-
-    <form action="quiz.php" method="post">
+    <form action="quiz.php" method="post"><br>
+    <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 6</h1>
     <h2><?php echo $perguntas[5]?></h2>
-    <input type="radio" name="respostas" value="0"><?php echo($respostas[5][0])?></br>
-    <input type="radio" name="respostas" value="1"><?php echo($respostas[5][1])?></br>
-    <input type="radio" name="respostas" value="2"><?php echo($respostas[5][2])?></br>
-    <input type="radio" name="respostas" value="3"><?php echo($respostas[5][3])?></br>
-    <input type="submit" name="responder" class="botao" value="Responder">
+    <input type="radio" name="res6" value="Harry Styles"><?php echo($respostas[5][0])?></br>
+    <input type="radio" name="res6" value="Joe Alwyn"><?php echo($respostas[5][1])?></br>
+    <input type="radio" name="res6" value="Joe Jonas"><?php echo($respostas[5][2])?></br>
+    <input type="radio" name="res6" value="Tom Hiddleston"><?php echo($respostas[5][3])?></br>
+    <input type="submit" name="res6" class="botao" value="Responder">
     <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
+    <?php echo $msg?>
 
 
 
-
-    <form action="quiz.php" method="post">
+    <form action="quiz.php" method="post"><br>
+    <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 7</h1>
     <h2><?php echo $perguntas[6]?></h2>
-    <input type="radio" name="respostas" value="0"><?php echo($respostas[6][0])?></br>
-    <input type="radio" name="respostas" value="1"><?php echo($respostas[6][1])?></br>
-    <input type="radio" name="respostas" value="2"><?php echo($respostas[6][2])?></br>
-    <input type="radio" name="respostas" value="3"><?php echo($respostas[6][3])?></br>
+    <input type="radio" name="res7" value="Folklore"><?php echo($respostas[6][0])?></br>
+    <input type="radio" name="res7" value="Red"><?php echo($respostas[6][1])?></br>
+    <input type="radio" name="res7" value="1989"><?php echo($respostas[6][2])?></br>
+    <input type="radio" name="res7" value="Midnights"><?php echo($respostas[6][3])?></br>
     <input type="submit" name="responder" class="botao" value="Responder">
     <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
+    <?php echo $msg?>
 
 
 
-
-    <form action="quiz.php" method="post">
+    <form action="quiz.php" method="post"><br>
+    <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 8</h1>
     <h2><?php echo $perguntas[7]?></h2>
-    <input type="radio" name="respostas" value="0"><?php echo($respostas[7][0])?></br>
-    <input type="radio" name="respostas" value="1"><?php echo($respostas[7][1])?></br>
-    <input type="radio" name="respostas" value="2"><?php echo($respostas[7][2])?></br>
-    <input type="radio" name="respostas" value="3"><?php echo($respostas[7][3])?></br>
+    <input type="radio" name="res8" value="Taylor swift tour"><?php echo($respostas[7][0])?></br>
+    <input type="radio" name="res8" value="Evermore tour"><?php echo($respostas[7][1])?></br>
+    <input type="radio" name="res8" value="The eras tour"><?php echo($respostas[7][2])?></br>
+    <input type="radio" name="res8" value="Midnights tour"><?php echo($respostas[7][3])?></br>
     <input type="submit" name="responder" class="botao" value="Responder">
     <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
+    <?php echo $msg?>
 
 
 
-
-    <form action="quiz.php" method="post">
+    <form action="quiz.php" method="post"><br>
+    <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 9</h1>
     <h2><?php echo $perguntas[8]?></h2>
-    <input type="radio" name="respostas" value="0"><?php echo($respostas[8][0])?></br>
-    <input type="radio" name="respostas" value="1"><?php echo($respostas[8][1])?></br>
-    <input type="radio" name="respostas" value="2"><?php echo($respostas[8][2])?></br>
-    <input type="radio" name="respostas" value="3"><?php echo($respostas[8][3])?></br>
+    <input type="radio" name="res9" value="10"><?php echo($respostas[8][0])?></br>
+    <input type="radio" name="res9" value="22"><?php echo($respostas[8][1])?></br>
+    <input type="radio" name="res9" value="13"><?php echo($respostas[8][2])?></br>
+    <input type="radio" name="res9" value="7"><?php echo($respostas[8][3])?></br>
     <input type="submit" name="responder" class="botao" value="Responder">
     <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
+    <?php echo $msg?>
 
 
 
-
-    <form action="quiz.php" method="post">
+    <form action="quiz.php" method="post"><br>
+    <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 10</h1>
     <h2><?php echo $perguntas[9]?></h2>
-    <input type="radio" name="respostas" value="0"><?php echo($respostas[9][0])?></br>
-    <input type="radio" name="respostas" value="1"><?php echo($respostas[9][1])?></br>
-    <input type="radio" name="respostas" value="2"><?php echo($respostas[9][2])?></br>
-    <input type="radio" name="respostas" value="3"><?php echo($respostas[9][3])?></br>
+    <input type="radio" name="res10" value="7"><?php echo($respostas[9][0])?></br>
+    <input type="radio" name="res10" value="8"><?php echo($respostas[9][1])?></br>
+    <input type="radio" name="res10" value="11"><?php echo($respostas[9][2])?></br>
+    <input type="radio" name="res10" value="12"><?php echo($respostas[9][3])?></br>
     <input type="submit" name="responder" class="botao" value="Responder">
     <input type="submit" name="Resultado" class="botao" value="Resultado">
     </form>
+    <?php echo $msg?>
 </body>
 </html>
