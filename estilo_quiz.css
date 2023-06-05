@@ -1,8 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Neucha', cursive;
-    background-color: #e9edff;
+    background-image: url(imagens/fundo.png);
 }
 
 .container{
@@ -19,7 +18,7 @@ header .logo{
 
 .secao-1{
     display: flex;
-    margin-top: 100px;
+    margin-top: 50px;
    }
 
    .texto-apresentacao h2{
@@ -28,7 +27,7 @@ header .logo{
    }
 
    .apresentacao img{
-    margin-right: 50px;
+    margin-left: -450px;
    }
 
    .secao-2{
@@ -98,22 +97,101 @@ header .logo{
         transition: 0.3s;
    }
 
-   footer{
+   /*Footer*/
+   :root{
+    --color-neutral-0:#0e0c0c;
+    --color-neutral-10:#171717;
+    --color-neutral-30:#a8a293;
+    --color-neutral-40:#f5f5f5;
+}
+
+* {
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   letter-spacing: 1px;
+}
+
+footer{
+    width: 100%;
+    color: var(--color-neutral-40);
+}
+
+.footer-link{
+  text-decoration: none;  
+}
+
+#footer_content{
+    background-color: #1C2029;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 3rem 3.5rem;
+    opacity: 0.9;
+}
+
+#footer_contacts h1{
+    margin-bottom: 0.75rem;
+}
+
+#footer_social_media{
     display: flex;
-    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+#footer_social_media .footer-link{
+    display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1C2029;
-    height: 80px;
-    padding-bottom: 40px;
-    opacity: 0.5;
-   }
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
 
-   footer p{
-    color: #ffff;
-    font-size: 14px;
-   }
+#footer_social_media .footer-link i{
+    font-size: 1.5rem;
+}
 
-   .dev{
-    margin-top: 55px;
-  }
+#footer_social_media .footer-link:hover{
+    opacity: 0.3;
+}
+
+#instagram{
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#twitter{
+    background-color: #00abf0 ;
+}
+
+#youtube{
+    background-color: #ff0000 ;
+}
+
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.footer-list .footer-link{
+    color: var(--color-neutral-30);
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover{
+    color: #92a2e8;
+}
+
+.footer-list p{
+    color: var(--color-neutral-30);
+    transition: all 0.4s;
+}
+
+.footer-list p:hover{
+    color: #92a2e8;
+}

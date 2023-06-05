@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    background-image: url(imagens/fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    max-width: 830px;
+    margin: auto;
+}
+
+header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.secao-1{
+    display: flex;
+    margin-top: 100px;
+   }
+
+   .texto-apresentacao h2{
+    font-size: 40px;
+    color: black;
+   }
+
+   .apresentacao img{
+    margin-right: 50px;
+   }
+
+ 
