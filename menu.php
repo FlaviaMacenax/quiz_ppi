@@ -38,21 +38,18 @@ if(isset($_POST["nomeJogador"])){
         <img src="imagens/taylormid.png" width="900" height="auto" alt="ícone de Taylor Swift">
   
     <!--Opções do menu-->
-    <section class="secao-2 container">
-  <div class="topicos">
-      <div class="topico">
-        <a href="quiz.php">AAAA</a>
-      </div>
+    <section class="opcoes contpag">
+    <div class="itens">
+        <input type="text" placeholder="Qual seu nome ?">
+    </div>
+    <div class="itens">
+        <a href="original.php">Iniciar jogo</a>
+    </div>
+    <div class="itens">
+    <a href="instruções.php">Instruções</a>
+    </div>
+    </section>
 
-      <div class="topico">
-          <a href="quiz.php">INICIAR JOGO</a>
-      </div>
-
-      <div class="topico">
-          <a href="instruções.php">INSTRUÇÕES</a>
-      </div>
-  </div>
-</section>
 </section>
 
 <!--Rodapé-->
