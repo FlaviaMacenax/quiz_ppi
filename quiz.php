@@ -1,13 +1,14 @@
 <?php
 session_start();
 
-
+//Array das perguntas
 $perguntas = array ("Qual a idade dela?", "Quando ela nasceu?", "Qual o apelido que os fãs brasileiros deram à Taylor Swift?",
 "Quantos álbuns de estúdio da Taylor foram lançados até agora?", "Qual é o nome do primeiro álbum da cantora?
 ", "Qual foi o último relacionamento da Taylor?", "Qual foi o álbum mais vendido da Taylor?",
 "Qual é o nome da tour atual (maio/2023) que a Taylor está fazendo?", "Qual é o número da sorte da Srta. Swift?
 ", "Quantos grammys ela ganhou?"
 );
+//Array das respostas
 $respostas = array(
     array ("27 anos", "30 anos", "33 anos", "36 anos"),
     array ("13 de dezembro de 1989", "27 de março de 1986", "23 de outubro de 1989", "17 de fevereiro de 1986"),
@@ -30,6 +31,7 @@ $acertos = 0;
 
 if(isset($_POST["responder"])){
     $botao = $_POST["responder"];
+
     //validação das respostas
     if(isset($_POST["res1"])){
         if($_POST["res1"] == "33") {
@@ -157,10 +159,14 @@ if(isset($_POST["responder"])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon"  type="image/x-icon" href="imagens/logo.png">
     <title>Quiz - Taylor Swift</title>
+    <style>
+
+    </style>
 </head>
 <body>
 
-
+<!--Pergunta 1 -->
+<section id="pergunta-1">
     <form action="quiz.php" method="post"><br>
         <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 1</h1>
@@ -173,9 +179,10 @@ if(isset($_POST["responder"])){
     <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
     <?php echo $msg?>
+</section>
 
-
-
+<!--Pergunta 2 -->
+<section id="pergunta-2">
     <form action="quiz.php" method="post"><br>
     <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 2</h1>
@@ -188,7 +195,10 @@ if(isset($_POST["responder"])){
     <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
     <?php echo $msg?>
+</section> 
 
+<!--Pergunta 3 -->
+<section id="pergunta-3">
     <form action="quiz.php" method="post"><br>
     <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 3</h1>
@@ -201,9 +211,10 @@ if(isset($_POST["responder"])){
     <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
     <?php echo $msg?>
+</section>
 
-
-
+<!--Pergunta 4 -->
+<section id = "pergunta-4">
     <form action="quiz.php" method="post"><br>
     <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 4</h1>
@@ -216,9 +227,10 @@ if(isset($_POST["responder"])){
     <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
     <?php echo $msg?>
+</section>
 
-
-
+<!--Pergunta 5 -->
+<section id = "pergunta-5">
     <form action="quiz.php" method="post"><br>
     <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 5</h1>
@@ -231,9 +243,10 @@ if(isset($_POST["responder"])){
     <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
     <?php echo $msg?>
+</section>
 
-
-
+<!--Pergunta 6 -->
+<section id = "pergunta-6">
     <form action="quiz.php" method="post"><br>
     <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 6</h1>
@@ -246,9 +259,11 @@ if(isset($_POST["responder"])){
     <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
     <?php echo $msg?>
+    </section>
 
 
-
+<!--Pergunta 7 -->
+<section id = "pergunta-7">
     <form action="quiz.php" method="post"><br>
     <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 7</h1>
@@ -261,9 +276,11 @@ if(isset($_POST["responder"])){
     <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
     <?php echo $msg?>
+    </section>
 
 
-
+<!--Pergunta 8 -->
+<section id = "pergunta-8">
     <form action="quiz.php" method="post"><br>
     <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 8</h1>
@@ -276,9 +293,10 @@ if(isset($_POST["responder"])){
     <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
     <?php echo $msg?>
+    </section>
 
-
-
+<!--Pergunta 9 -->
+<section id = "pergunta-9">
     <form action="quiz.php" method="post"><br>
     <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 9</h1>
@@ -291,9 +309,10 @@ if(isset($_POST["responder"])){
     <input type="submit" name="Próxima" class="botao" value="Próxima">
     </form>
     <?php echo $msg?>
+    </section>
 
-
-
+<!--Pergunta 10 -->
+<section id = "pergunta-10">
     <form action="quiz.php" method="post"><br>
     <h3><?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h3>
     <h1>Pergunta 10</h1>
@@ -306,5 +325,6 @@ if(isset($_POST["responder"])){
     <a href = "final.php"><input type="submit" name="Resultado" class="botao" value="Resultado"></a>
     </form>
     <?php echo $msg?>
+    </section>
 </body>
 </html>
