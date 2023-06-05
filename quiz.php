@@ -23,6 +23,8 @@ $respostas = array(
 
 
 $msg = "";
+$pontos = 0;
+$acertos = 0;
 
 
 
@@ -32,71 +34,111 @@ if(isset($_POST["responder"])){
     if(isset($_POST["res1"])){
         if($_POST["res1"] == "33") {
             $msg = "Parabéns, você acertou!";
+            $pontos = $pontos + 100;
+            $acertos = $acertos + 1;
         }else{
             $msg = "Que pena, você errou!";
+            $pontos = $pontos + 0;
+            $acertos = $acertos + 0;
         }
     }
     if(isset($_POST["res2"])){
         if($_POST["res2"] == "13 de dezembro") {
         $msg = "Parabéns, você acertou!" ;
+        $pontos = $pontos + 100;
+        $acertos = $acertos + 1;
         }else{
             $msg = "Que pena, você errou!";
+            $pontos = $pontos + 0;
+            $acertos = $acertos + 0;
         }
     }
     if(isset($_POST["res3"])){
         if($_POST["res3"] == "loirinha") {
             $msg = "Parabéns, você acertou!";
+            $pontos = $pontos + 100;
+            $acertos = $acertos + 1;
         }else{
             $msg = "Que pena, você errou!";
+            $pontos = $pontos + 0;
+            $acertos = $acertos + 0;
         }
     }
     if(isset($_POST["res4"])){
         if($_POST["res4"] == "10") {
             $msg = "Parabéns, você acertou!";
+            $pontos = $pontos + 100;
+            $acertos = $acertos + 1;
         }else{
             $msg = "Que pena, você errou!";
+            $pontos = $pontos + 0;
+            $acertos = $acertos + 0;
         }
     }
     if(isset($_POST["res5"])){
         if($_POST["res5"] == "Taylor Swift") {
             $msg = "Parabéns, você acertou!";
+            $pontos = $pontos + 100;
+            $acertos = $acertos + 1;
         }else{
             $msg = "Que pena, você errou!";
+            $pontos = $pontos + 0;
+            $acertos = $acertos + 0;
         }
     }
     if(isset($_POST["res6"])){
         if($_POST["res6"] == "Joe Alwyn") {
             $msg = "Parabéns, você acertou!";
+            $pontos = $pontos + 100;
+            $acertos = $acertos + 1;
         }else{
             $msg = "Que pena, você errou!";
+            $pontos = $pontos + 0;
+            $acertos = $acertos + 0;
         }
     }
     if(isset($_POST["res7"])){
         if($_POST["res7"] == "Midnights") {
             $msg = "Parabéns, você acertou!";
+            $pontos = $pontos + 100;
+            $acertos = $acertos + 1;
         }else{
             $msg = "Que pena, você errou!";
+            $pontos = $pontos + 0;
+            $acertos = $acertos + 0;
         }
     }
     if(isset($_POST["res8"])){
         if($_POST["res8"] == "The eras tour") {
             $msg = "Parabéns, você acertou!";
+            $pontos = $pontos + 100;
+            $acertos = $acertos + 1;
         }else{
             $msg = "Que pena, você errou!";
+            $pontos = $pontos + 0;
+            $acertos = $acertos + 0;
         }
     }
     if(isset($_POST["res9"])){
         if($_POST["res9"] == "13") {
             $msg = "Parabéns, você acertou!";
+            $pontos = $pontos + 100;
+            $acertos = $acertos + 1;
         }else{
             $msg = "Que pena, você errou!";
+            $pontos = $pontos + 0;
+            $acertos = $acertos + 0;
         }
     }
     if(isset($_POST["res10"])){
         if($_POST["res10"] == "12") {
             $msg = "Parabéns, você acertou!";
+            $pontos = $pontos + 100;
+            $acertos = $acertos + 1;
         }else{
             $msg = "Que pena, você errou!";
+            $pontos = $pontos + 0;
+            $acertos = $acertos + 0;
         }
     }
     
@@ -261,7 +303,7 @@ if(isset($_POST["responder"])){
     <input type="radio" name="res10" value="11"><?php echo($respostas[9][2])?></br>
     <input type="radio" name="res10" value="12"><?php echo($respostas[9][3])?></br>
     <input type="submit" name="responder" class="botao" value="Responder">
-    <input type="submit" name="Resultado" class="botao" value="Resultado">
+    <a href = "final.php"><input type="submit" name="Resultado" class="botao" value="Resultado"></a>
     </form>
     <?php echo $msg?>
 </body>
