@@ -41,7 +41,7 @@ if(isset($_POST["nomeJogador"])){
     <section class="secao-2 container">
   <div class="topicos">
       <div class="topico">
-        <a href="quiz.php"> AAAA </a>
+        <a href="quiz.php">AAAA</a>
       </div>
 
       <div class="topico">
@@ -49,7 +49,7 @@ if(isset($_POST["nomeJogador"])){
       </div>
 
       <div class="topico">
-          <a href="instruções.php"> INSTRUÇÕES</a>
+          <a href="instruções.php">INSTRUÇÕES</a>
       </div>
   </div>
 </section>
