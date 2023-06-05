@@ -26,7 +26,7 @@ if(isset($_POST["nomeJogador"])){
     <title>Taylor Swift Quiz</title>
 </head>
 <body>
-    <!-- Cabeçalho -->
+    <!--Cabeçalho-->
     <header class="container">
       <div class="logo">
         <img src="imagens/logo.png" width="250" height="auto" alt="logo do quiz">
@@ -35,16 +35,27 @@ if(isset($_POST["nomeJogador"])){
 
     <!--Menu-->
   <section class="secao-1 container">
-    <div class="apresentacao">
         <img src="imagens/taylormid.png" width="900" height="auto" alt="ícone de Taylor Swift">
-    </div>
+  
+    <!--Opções do menu-->
+    <section class="secao-2 container">
+  <div class="topicos">
+      <div class="topico">
+        <a href="quiz.php"> AAAA </a>
+      </div>
 
-    <div class="texto-apresentacao">
-        <h2>O quanto você sabe sobre a cantora americana Taylor Swift?</h2>
-    </div>
+      <div class="topico">
+          <a href="quiz.php">INICIAR JOGO</a>
+      </div>
+
+      <div class="topico">
+          <a href="instruções.php"> INSTRUÇÕES</a>
+      </div>
+  </div>
+</section>
 </section>
 
-<!-- Rodapé -->
+<!--Rodapé-->
  <footer>
     <div id="footer_content">
       <div id="footer_contacts">

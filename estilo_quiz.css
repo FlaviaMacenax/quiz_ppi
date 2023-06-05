@@ -21,12 +21,7 @@ header .logo{
     margin-top: 50px;
    }
 
-   .texto-apresentacao h2{
-    font-size: 40px;
-    color: black;
-   }
-
-   .apresentacao img{
+   .secao-1 img{
     margin-left: -450px;
    }
 
@@ -36,12 +31,6 @@ header .logo{
     justify-content: center;
     margin-bottom: 50px;
     margin-top: 75px;
-   }
-
-   .secao-2 h2{
-    color: black;
-    text-transform: uppercase;
-    text-align: center;
    }
 
    .topicos{
@@ -54,15 +43,25 @@ header .logo{
    .topico{
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     background-color: #92a2e8;
     width: 200px;
     height: 180px;
     border-radius: 10px;
-    color: black;
+    color: #ffffff;
     margin-bottom: 40px;
    }
+   
+   .topico a{
+        text-decoration: none;
+        transition: 0.3s;
+        color: #ffffff;
+   }
+
+   .topico a:hover{
+    color: #303650;
+    }
 
    .contpag{
     max-width: 1000px;
