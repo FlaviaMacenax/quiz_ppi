@@ -13,8 +13,8 @@
     }
 
         ::-webkit-scrollbar-thumb{
-    width: 15px;
-    background-color: #92a2e8;
+        width: 15px;
+        background-color: #92a2e8;
         }
 
     .container{
