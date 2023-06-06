@@ -5,6 +5,16 @@ body{
     font-family: 'Playfair Display', serif;
 }
 
+::-webkit-scrollbar{
+    width: 15px;
+    background-color: #1C2029;
+}
+
+::-webkit-scrollbar-thumb{
+    width: 15px;
+    background-color: #92a2e8;
+}
+
 .container{
     max-width: 830px;
     margin: auto;
