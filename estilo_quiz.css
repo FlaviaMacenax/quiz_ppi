@@ -145,7 +145,7 @@ header .logo{
 
    .itens a:hover{
     color: #303650;
-}
+   }
 
     .inst{
         color: #ffffff;
@@ -159,6 +159,40 @@ header .logo{
     .inst img{
         margin: 25px;
     }
+
+    .campo input{
+        width: 50%;
+        height: 25px;
+       background-color: rgba(255, 255, 255, 0.32);
+       border-radius: 20px;
+       outline: none;
+       border: 2px solid transparent;
+       padding: 15px;
+       font-size: 15px;
+       color: #ffff;
+       transition: all 0.4s ease;
+    }
+    
+    .campo input:focus{
+        border-color: #303650;
+    }
+
+    .itens button{
+        background-color:#6173C6;
+        width: 75px;
+        height: auto;
+        font-size: 15px;
+        border-radius: 15px;
+        border-color: #303650;
+        color: #ffff;
+        margin-left: 15px;
+    }
+    
+    .itens button:hover {
+        background-color: #303650; 
+        color: #ffffff;
+        border-color: #92a2e8;
+     }
    
    /*Footer*/
 * {

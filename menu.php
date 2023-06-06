@@ -41,8 +41,8 @@ if(isset($_POST["nomeJogador"])){
     <!--Opções do menu-->
     <form action="menu.php" method="post">
     <section class="opcoes contpag">
-    <div class="itens">
-        <input type="text" placeholder="Qual seu nome ?" name="nomeJogador"><button type= "submit" name="enviar">Salvar nome</button> 
+    <div class="itens campo">
+        <input type="text" placeholder="Qual seu nome ?" name="nomeJogador"><button type= "submit" name="enviar">Salvar</button> 
     </div>
     <div class="itens">
         <a href="original.php">Iniciar jogo</a>
