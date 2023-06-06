@@ -99,6 +99,7 @@ header .logo{
     text-transform: uppercase;
     font-size: 15px;
     font-weight: bold;
+    box-shadow: 10px 5px 5px #1C2029;
    }
 
    .voltar a{
@@ -107,9 +108,14 @@ header .logo{
         transition: 0.3s;
    }
 
+   .voltar a:hover{
+    color: #303650;
+    }
+
    .opcoes{
     display: flex;
     flex-direction: column;
+    margin-top: 125px;
    }
 
    .itens{
@@ -120,6 +126,7 @@ header .logo{
     padding-top: 10px;
     padding-bottom: 10px;
     margin-top: 25px;
+    margin-bottom: 25px;
     margin-left: -100px;
     padding-left: 155px;
     text-align: center;
@@ -127,6 +134,7 @@ header .logo{
     text-transform: uppercase;
     font-size: 25px;
     font-weight: bold;
+    box-shadow: 15px 5px 5px #1C2029;
    }
 
    .itens a{
