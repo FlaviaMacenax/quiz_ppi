@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     background-image: url(imagens/fundo.png);
+    font-family: 'Playfair Display', serif;
 }
 
 .container{
@@ -127,10 +128,22 @@ header .logo{
    .itens a:hover{
     color: #303650;
 }
+
+    .inst{
+        color: #ffffff;
+        text-align: center;
+        margin-top: 25px;
+        font-weight: bold;
+        font-size: 25px;
+        margin-bottom: 50px;
+    }
+
+    .inst img{
+        margin: 25px;
+    }
    
    /*Footer*/
 * {
-   font-family: Georgia, 'Times New Roman', Times, serif;
    margin: 0;
    padding: 0;
    box-sizing: border-box;
