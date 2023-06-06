@@ -1,89 +1,132 @@
-body{
+/*Configurações comuns a todo o corpo do quiz*/
+    body{
     margin: 0;
     padding: 0;
     background-image: url(imagens/fundo.png);
     font-family: 'Playfair Display', serif;
-}
-
-::-webkit-scrollbar{
+    }
+ 
+/*Personalização da barra*/
+    ::-webkit-scrollbar{
     width: 15px;
     background-color: #1C2029;
-}
+    }
 
-::-webkit-scrollbar-thumb{
+        ::-webkit-scrollbar-thumb{
     width: 15px;
     background-color: #92a2e8;
-}
+        }
 
-.container{
+    .container{
     max-width: 830px;
     margin: auto;
-}
+    }
 
-header .logo{
+ /*Cabeçalho*/
+    header .logo{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 35px;
-}
+    }
 
-.secao-1{
+/*Geral*/
+   .contpag{
+    max-width: 1000px;
+    margin: auto;
+    }
+
+
+ /*Parte principal do menu*/
+    .secao-1{
     display: flex;
     margin-top: 50px;
    }
 
-   .secao-1 img{
-    margin-left: -350px;
-   }
+        .secao-1 img{
+        margin-left: -350px;
+        }
 
-   .secao-2{
+        .secao-2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 50px;
+        margin-top: 75px;
+        }
+ 
+  /*Opções do menu*/
+  .opcoes{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-bottom: 50px;
-    margin-top: 75px;
+    margin-top: 100px;
    }
 
-   .topicos{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 25px;
-   }
+        .itens{
+        background-color: #92a2e8;
+        width: 500px;
+        height: auto;
+        display: flex;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-left: -100px;
+        padding-left: 155px;
+        text-align: center;
+        border-radius: 50px;
+        text-transform: uppercase;
+        font-size: 25px;
+        font-weight: bold;
+        box-shadow: 15px 5px 5px #1C2029;
+        }
 
-   .topico{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    background-color: #92a2e8;
-    width: 200px;
-    height: 180px;
-    border-radius: 10px;
-    color: #ffffff;
-    margin-bottom: 40px;
-   }
-   
-   .topico a{
+        .itens a{
+        color: #ffff;
         text-decoration: none;
         transition: 0.3s;
-        color: #ffffff;
-   }
+        }
 
-   .topico a:hover{
-    color: #303650;
-    }
+        .itens a:hover{
+        color: #303650;
+        }
 
-   .contpag{
-    max-width: 1000px;
-    margin: auto;
-  }
+/*Input e botão da página inicial*/
+        .campo input{
+            width: 50%;
+            height: 25px;
+           background-color: rgba(255, 255, 255, 0.32);
+           border-radius: 20px;
+           outline: none;
+           border: 2px solid transparent;
+           padding: 15px;
+           font-size: 15px;
+           color: #ffff;
+           transition: all 0.4s ease;
+        }
+        
+        .campo input:focus{
+            border-color: #303650;
+        }
+    
+        .itens button{
+            background-color:#6173C6;
+            width: 75px;
+            height: auto;
+            font-size: 15px;
+            border-radius: 15px;
+            border-color: #303650;
+            color: #ffff;
+            margin-left: 15px;
+        }
+        
+        .itens button:hover {
+            background-color: #303650; 
+            color: #ffffff;
+            border-color: #92a2e8;
+         }
 
-  .menu{
-    display: flex;
-    flex-direction: row;
-   }
-
+/*Botão voltar da página de instruções*/
    .voltar{
     margin-right: 850px;
     background-color: #92a2e8;
@@ -101,52 +144,19 @@ header .logo{
     font-weight: bold;
     box-shadow: 10px 5px 5px #1C2029;
    }
-
-   .voltar a{
+   
+        .voltar a{
         color: #ffff;
         text-decoration: none;
         transition: 0.3s;
-   }
+        }
 
-   .voltar a:hover{
-    color: #303650;
-    }
+        .voltar a:hover{
+        color: #303650;
+        }
 
-   .opcoes{
-    display: flex;
-    flex-direction: column;
-    margin-top: 100px;
-   }
-
-   .itens{
-    background-color: #92a2e8;
-    width: 500px;
-    height: auto;
-    display: flex;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    margin-left: -100px;
-    padding-left: 155px;
-    text-align: center;
-    border-radius: 50px;
-    text-transform: uppercase;
-    font-size: 25px;
-    font-weight: bold;
-    box-shadow: 15px 5px 5px #1C2029;
-   }
-
-   .itens a{
-        color: #ffff;
-        text-decoration: none;
-        transition: 0.3s;
-   }
-
-   .itens a:hover{
-    color: #303650;
-   }
-
+   
+/*Página de instruções*/
     .inst{
         color: #ffffff;
         text-align: center;
@@ -159,41 +169,8 @@ header .logo{
     .inst img{
         margin: 25px;
     }
-
-    .campo input{
-        width: 50%;
-        height: 25px;
-       background-color: rgba(255, 255, 255, 0.32);
-       border-radius: 20px;
-       outline: none;
-       border: 2px solid transparent;
-       padding: 15px;
-       font-size: 15px;
-       color: #ffff;
-       transition: all 0.4s ease;
-    }
-    
-    .campo input:focus{
-        border-color: #303650;
-    }
-
-    .itens button{
-        background-color:#6173C6;
-        width: 75px;
-        height: auto;
-        font-size: 15px;
-        border-radius: 15px;
-        border-color: #303650;
-        color: #ffff;
-        margin-left: 15px;
-    }
-    
-    .itens button:hover {
-        background-color: #303650; 
-        color: #ffffff;
-        border-color: #92a2e8;
-     }
    
+
    /*Footer*/
 * {
    margin: 0;
