@@ -26,7 +26,7 @@ session_start();
         array ("7", "8", "11", "12")
     );
 
-
+    
     function exibirQuestao($i){
         global $perguntas, $respostas;
 ?>
