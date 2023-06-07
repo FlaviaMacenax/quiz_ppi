@@ -7,6 +7,7 @@ $msg = "";
 if(isset($_POST["enviar"])){
   $botao = $_POST["enviar"];
   
+  //Nome do jogador
 if(isset($_POST["nomeJogador"])){
   $nomeJogador = $_POST["nomeJogador"];
   $_SESSION ["nomeJogador"] = $nomeJogador;
