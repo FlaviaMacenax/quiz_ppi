@@ -33,7 +33,7 @@ if(isset($_POST["nomeJogador"])){
     <title>Taylor Swift Quiz</title>
 </head>
 <body> 
-    <!--Página de primeiro contato com o quiz. Ela deve pegar o nome do jogador, exibir instruções e direcionar ele para a página 
+    <!--Página de primeiro contato com o quiz. Ela deve pegar o nome do jogador, exibir instruções e direciona-lo para a página 
     das perguntas-->
 
     <!--Cabeçalho-->

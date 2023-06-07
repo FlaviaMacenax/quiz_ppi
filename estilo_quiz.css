@@ -169,6 +169,17 @@
     .inst img{
         margin: 25px;
     }
+
+    /*Página de questões*/
+    .icones{
+        color: #ffffff;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .perguntas{
+        color: #ffffff;
+    }
    
 
    /*Footer*/
