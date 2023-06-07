@@ -110,20 +110,21 @@
         }
     
         .itens button{
-            background-color:#6173C6;
-            width: 75px;
+            background-color: #92a2e8;
+            width: 220px;
             height: auto;
-            font-size: 15px;
-            border-radius: 15px;
-            border-color: #303650;
+            border: none;
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            font-size: 25px;
+            text-transform: uppercase;
+            padding-right: 25px;
             color: #ffff;
-            margin-left: 15px;
+            transition: all 0.4s ease;
         }
         
         .itens button:hover {
-            background-color: #303650; 
-            color: #ffffff;
-            border-color: #92a2e8;
+           color: #303650;
          }
 
 /*Botão voltar da página de instruções*/

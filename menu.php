@@ -51,13 +51,11 @@ if(isset($_POST["nomeJogador"])){
     <!--Opções do menu-->
     <form action="original.php" method="post">
     <section class="opcoes contpag">
-    <div class="itens campo">  <!--Onde o jogador deve colocar seu nome-->  <!--Direciona o jogador para as perguntas-->
+    <div class="itens campo">  <!--Onde o jogador deve colocar seu nome-->  
         <input type="text" placeholder="Qual seu nome ?" name="nomeJogador" required>
     </div>
     <div class="itens">
-        
-            <a href="original.php"><button name="enviar">Iniciar jogo</button></a>
-        
+            <a href="original.php"><button name="enviar">Iniciar jogo</button></a> <!--Direciona o jogador para as perguntas-->
     </div>
     <div class="itens">
     <a href="instruções.php">Instruções</a> <!--Direciona o jogados para as instruções--> 
