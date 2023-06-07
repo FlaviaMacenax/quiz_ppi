@@ -49,13 +49,15 @@ if(isset($_POST["nomeJogador"])){
         <img src="imagens/taylormid.png" width="900" height="auto" alt="ícone de Taylor Swift">
   
     <!--Opções do menu-->
-    <form action="menu.php" method="post">
+    <form action="original.php" method="post">
     <section class="opcoes contpag">
-    <div class="itens campo">  <!--Onde o jogador deve colocar seu nome-->
-        <input type="text" placeholder="Qual seu nome ?" name="nomeJogador"><button type= "submit" name="enviar">Salvar</button> 
+    <div class="itens campo">  <!--Onde o jogador deve colocar seu nome-->  <!--Direciona o jogador para as perguntas-->
+        <input type="text" placeholder="Qual seu nome ?" name="nomeJogador" required>
     </div>
     <div class="itens">
-        <a href="original.php">Iniciar jogo</a> <!--Direciona o jogador para as perguntas-->
+        
+            <a href="original.php"><button name="enviar">Iniciar jogo</button></a>
+        
     </div>
     <div class="itens">
     <a href="instruções.php">Instruções</a> <!--Direciona o jogados para as instruções--> 
