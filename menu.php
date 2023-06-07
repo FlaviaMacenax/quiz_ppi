@@ -20,13 +20,22 @@ if(isset($_POST["nomeJogador"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Importação da fonte-->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Importação dos ícones do rodapé-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Ícone da barra do navegador-->
     <link rel="icon" type="image/x-icon" href="imagens/icon.png">
+    <!--CSS-->
     <link rel="stylesheet" type="text/css" href="estilo_quiz.css" />
     <title>Taylor Swift Quiz</title>
 </head>
-<body>
+<body> 
+    <!--Página de primeiro contato com o quiz. Ela deve pegar o nome do jogador, exibir instruções e direciona-lo para a página 
+    das perguntas-->
+
     <!--Cabeçalho-->
     <header class="container">
       <div class="logo">
@@ -41,20 +50,19 @@ if(isset($_POST["nomeJogador"])){
     <!--Opções do menu-->
     <form action="menu.php" method="post">
     <section class="opcoes contpag">
-    <div class="itens">
-        <input type="text" placeholder="Qual seu nome ?" name="nomeJogador"><button type= "submit" name="enviar">Salvar nome</button> 
+    <div class="itens campo">  <!--Onde o jogador deve colocar seu nome-->
+        <input type="text" placeholder="Qual seu nome ?" name="nomeJogador"><button type= "submit" name="enviar">Salvar</button> 
     </div>
     <div class="itens">
-        <a href="original.php">Iniciar jogo</a>
+        <a href="original.php">Iniciar jogo</a> <!--Direciona o jogador para as perguntas-->
     </div>
     <div class="itens">
-    <a href="instruções.php">Instruções</a>
+    <a href="instruções.php">Instruções</a> <!--Direciona o jogados para as instruções--> 
     </div>
     </section>
-
 </section></form>
 
-<!--Rodapé-->
+<!--Rodapé (deve mostrar a equipe de devs)-->
  <footer>
     <div id="footer_content">
       <div id="footer_contacts">

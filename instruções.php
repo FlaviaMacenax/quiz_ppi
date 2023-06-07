@@ -31,9 +31,10 @@
                 <img src="imagens/quizicon.png" width="230px" height="auto" alt="ícone de quiz">
                  <p> O Taylor Swift Quiz é um jogo de perguntas e respostas, onde para cada pergunta lhe são fornecidas quatro 
                     alternativas mas apenas uma é correta. Você deve descobrir qual opção é a correta para conseguir acumular 
-                    a maior quantidade de pontos. Para cada resposta certa você ganha 100 pontos e uma resposta errada não lhe 
-                    faz ganhar pontos. Será que você é capaz de chegar aos mil pontos ?
-                </p>
+                    a maior quantidade de pontos.</p>
+                    <p>Para cada resposta certa você ganha 100 pontos e uma resposta errada não lhe 
+                    faz ganhar pontos. É necessário que você insira seu nome e o envie para iniciar uma partida. Será que você 
+                    é capaz de chegar aos mil pontos </p>
     </section>
 
    <!--Rodapé-->
