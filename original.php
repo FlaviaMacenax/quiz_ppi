@@ -6,6 +6,7 @@ session_start();
     $pontos="";
     $acertos = "";
 
+    //Array contendo as perguntas
     $perguntas = array ("Qual a idade dela?", "Quando ela nasceu?", "Qual o apelido que os fãs brasileiros deram à Taylor Swift?",
     "Quantos álbuns de estúdio da Taylor foram lançados até agora?", "Qual é o nome do primeiro álbum da cantora?
     ", "Qual foi o último relacionamento da Taylor?", "Qual foi o álbum mais vendido da Taylor?",
@@ -26,7 +27,7 @@ session_start();
         array ("7", "8", "11", "12")
     );
 
-    
+    //Função para exibir as perguntas
     function exibirQuestao($i){
         global $perguntas, $respostas;
 ?>
@@ -59,7 +60,7 @@ session_start();
        
         }*/
 
-
+//O começo de um sonho, que é pesadelo
     if(isset($_POST["responder"])){
         $botao = $_POST["responder"];
     if(isset($_POST[$perguntas[1]])){
@@ -78,7 +79,7 @@ session_start();
 
 
 
-
+//Estrurura para fazer com que o botão passe para a próxima pergunta
     if(isset($_POST['num'])){
         $valor = $_POST['num'];
     }
@@ -86,9 +87,6 @@ session_start();
     if(isset($_POST['botao2'])){
         $valor = $_POST['num'] + 1;
     }
-    /*if(isset($_POST['botao2']) && $valor = $_POST['num'] > 10){
-        ;
-    }*/
 
 
 ?>
