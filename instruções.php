@@ -13,6 +13,7 @@
 <body>
      <!--Página de instruções com informações de como funciona e como jogar o quiz-->
     <!-- Cabeçalho -->
+    <img src="imagens/faixa.png"  width="1265px" height="85px" alt="imagem das eras da Taylor">
     <header class="container">
       <div class="logo">
         <img src="imagens/logo.png" width="200" height="106" alt="logo do quiz">
@@ -34,7 +35,7 @@
                     alternativas mas apenas uma é correta. Você deve descobrir qual opção é a correta para conseguir acumular 
                     a maior quantidade de pontos.</p>
                     <p>Para cada resposta certa você ganha 100 pontos e uma resposta errada não lhe 
-                    faz ganhar pontos. É necessário que você insira seu nome e o envie para iniciar uma partida. Será que você 
+                    faz ganhar pontos. É necessário que você insira seu nome para iniciar uma partida. Será que você 
                     é capaz de chegar aos mil pontos ?</p>
     </section>
 
