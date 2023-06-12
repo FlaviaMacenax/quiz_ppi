@@ -36,14 +36,24 @@ session_start();
         if ($alternativa==posicaoResposta){
             $pontos = $_POST["pontos"]+100;
             $acertos = $_POST["acertos"]+1;
-            return "Parabéns, você acertou e ganhou 100 pontos!!! :)";
+            $msg = "Parabéns, você acertou e ganhou 100 pontos!!! :)";
         }else{
             $pontos= $_POST["pontos"];
             $acertos = $_POST["acertos"];
-            return  "Que pena, você errou e não ganhou pontos!!! :("; 
+            $msg = "Que pena, você errou e não ganhou pontos!!! :("; 
             }
         }
-    
+        
+     //Estrutura para mostrar se a questão marcada foi a correta ou errada, caso o usuário selecione o botão responder
+        if(isset($_POST["responder"])){
+            $botao = $_POST["responder"];
+            
+    //Chamando a função de validação da resposta
+            if(isset($_POST["alternativas"])){
+                $validacao= validarResposta($_POST["alternativas"], $posicaoRespostas[$valor]);
+                echo $msg;
+                }
+            }
 
 
     //Função para exibir as perguntas
@@ -61,16 +71,6 @@ session_start();
         </form>
 <?php
     }   
-
-//Estrutura para mostrar se a questão marcada foi a correta ou errada, caso o usuário selecione o botão responder
-    if(isset($_POST["responder"])){
-        $botao = $_POST["responder"];
-        
-//Chamando a função de validação da resposta
-        if(isset($_POST["alternativas"])){
-            $validacao= validarResposta($_POST["alternativas"], $posicaoRespostas[$valor]);
-            }$msg= " ".$validacao;
-                }
     
 //Estrurura para fazer com que o botão passe para a próxima pergunta
 if(isset($_POST['valor'])){
@@ -79,7 +79,6 @@ if(isset($_POST['valor'])){
     if(isset($_POST['botao2'])){
         $valor = $_POST['valor'] + 1;
     }
-
 
 ?>
 
