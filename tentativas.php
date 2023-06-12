@@ -5,6 +5,7 @@ session_start();
     $msg= "";
     $pontos="";
     $acertos = "";
+    $validacao = "";
 
     //Array contendo as perguntas
     $perguntas = array ("Qual a idade dela?", "Quando ela nasceu?", "Qual o apelido que os fãs brasileiros deram à Taylor Swift?",
@@ -13,8 +14,8 @@ session_start();
     "Qual é o nome da tour atual (maio/2023) que a Taylor está fazendo?", "Qual é o número da sorte da Srta. Swift?
     ", "Quantos grammys ela ganhou?"
     );
-    //Array das respostas
-    $respostas = array(
+    //Array das alternativas
+    $alternativas = array(
         array ("27 anos", "30 anos", "33 anos", "36 anos"),
         array ("13 de dezembro de 1989", "27 de março de 1986", "23 de outubro de 1989", "17 de fevereiro de 1986"),
         array ("Loirinha", "Loirona", "Lourena", "Loucona"),
@@ -26,62 +27,51 @@ session_start();
         array ("10", "22", "13", "7"),
         array ("7", "8", "11", "12")
     );
-    
+
     //Array com a sequência de respostas
     $posicaoRespostas = array(3, 1, 1, 2, 1, 2, 4, 3, 3, 4);
 
+//Função para validar a resposta
+    function validarResposta($alternativa, $posicaoResposta){
+        if ($alternativa==posicaoResposta){
+            $pontos = $_POST["pontos"]+100;
+            $acertos = $_POST["acertos"]+1;
+            return "Parabéns, você acertou e ganhou 100 pontos!!! :)";
+        }else{
+            $pontos= $_POST["pontos"];
+            $acertos = $_POST["acertos"];
+            return  "Que pena, você errou e não ganhou pontos!!! :("; 
+            }
+        }
+    
+
+
     //Função para exibir as perguntas
     function exibirQuestao($i){
-        global $perguntas, $respostas;
+        global $perguntas, $alternativas, $msg;
 ?>
-        <form action="original.php" method="post"><br>
+        <form action="tentativas.php" method="post"><br>
+        <?php echo $msg?>
         <h1>Pergunta <?php echo $i+1?></h1>
         <h2><?php echo $perguntas[$i]?></h2>
-        <input type="radio" name="res" value="0"><?php echo($respostas[$i][0])?></br>
-        <input type="radio" name="res" value="1"><?php echo($respostas[$i][1])?></br>
-        <input type="radio" name="res" value="2"><?php echo($respostas[$i][2])?></br>
-        <input type="radio" name="res" value="3"><?php echo($respostas[$i][3])?></br>
+        <input type="radio" name="alternativas" value="0"><?php echo($alternativas[$i][0])?></br>
+        <input type="radio" name="alternativas" value="1"><?php echo($alternativas[$i][1])?></br>
+        <input type="radio" name="alternativas" value="2"><?php echo($alternativas[$i][2])?></br>
+        <input type="radio" name="alternativas" value="3"><?php echo($alternativas[$i][3])?></br>
         </form>
 <?php
     }   
-//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACHORO
-    /*function validarResposta($alternativa, $resposta){
-        if ($alternativa == $resposta){
-            $pontos= $pontos+100;
-            $acertos= $acertos+1;
-        }else{
-            $pontos= $pontos+0;
-            $acertos= $acertos+0;
-            
-        }
-    }*/
-    /*if(isset($_POST["responder"])){
-        $botao = $_POST["responder"];
-        if(isset($_POST[$perguntas[0]])){
-            if(($_POST[$perguntas[0]], $respostas[0][2]));
-            }$msg="Parabéns, você acertou!";
-       
-        }*/
 
-//O começo de um sonho, que é pesadelo
+//Estrutura para mostrar se a questão marcada foi a correta ou errada, caso o usuário selecione o botão responder
     if(isset($_POST["responder"])){
         $botao = $_POST["responder"];
-    if(isset($_POST[$perguntas[1]])){
-        if($_POST[$perguntas[1]] == $respostas[1][2]) {
-            $msg = "Parabéns, você acertou!";
-            $pontos = $pontos + 100;
-            $acertos = $acertos + 1;
-        }else{
-            $msg = "Que pena, você errou!";
-            $pontos = $pontos + 0;
-            $acertos = $acertos + 0;
-        }
-    }
-}
-
-
-
-
+        
+//Chamando a função de validação da resposta
+        if(isset($_POST["alternativas"])){
+            $validacao= validarResposta($_POST["alternativas"], $posicaoRespostas[$valor]);
+            }$msg= " ".$validacao;
+                }
+    
 //Estrurura para fazer com que o botão passe para a próxima pergunta
 if(isset($_POST['valor'])){
     $valor = $_POST['valor'];
@@ -92,7 +82,6 @@ if(isset($_POST['valor'])){
 
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -140,7 +129,7 @@ if(isset($_POST['valor'])){
         </div>
 
     <div class="contpag">
-    <form action="original.php" method="post">
+    <form action="tentativas.php" method="post">
         <input type="hidden" name="valor" value="<?php echo $valor ?>">
         <button name="responder" value="responder">Responder</button><br>
         <button name="botao2" value="+">Próxima</button>
@@ -204,5 +193,3 @@ if(isset($_POST['valor'])){
   </footer>
 </body>
 </html>
-
-
