@@ -51,7 +51,6 @@ session_start();
     //Chamando a função de validação da resposta
             if(isset($_POST["alternativas"])){
                 $validacao= validarResposta($_POST["alternativas"], $posicaoRespostas[$valor]);
-                echo $msg;
                 }
             }
 
