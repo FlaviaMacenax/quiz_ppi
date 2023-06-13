@@ -102,7 +102,7 @@ if(isset($_POST["nomeJogador"])){
  
       <ul class="footer-list">
           <li>
-              <h3>Créditos</h3>
+              <h3>Ficha técnica</h3>
           </li>
           <li>
               <p>Trabalho realizado para a disciplina de programação para internet</p>

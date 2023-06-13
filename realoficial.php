@@ -76,7 +76,7 @@ function exibirQuestao($i){
     <form action="realoficial.php" method="post"><br>
     <?php echo $msg?><br>
     <h2><i class="fa-solid fa-trophy"></i><label>Pontos: <input type="text" name="ponto" value="<?php echo $ponto; ?>" readonly></h2></label>
-    <h1 class="perg" >Pergunta <?php echo $i+1?></h1>
+    <h1 class="perg" >Pergunta <?php echo $i+1?><i class="fa-solid fa-circle-question fa-bounce inter"></i> </h1>
     <h2 class="pergunta"><?php echo $perguntas[$i]?></h2>
     <div class="alternativa">
         <input type="radio" name="res" value="1"><?php echo($respostas[$i][0])?></br>
@@ -181,7 +181,7 @@ function exibirQuestao($i){
  
       <ul class="footer-list">
           <li>
-              <h3>Créditos</h3>
+              <h3>Ficha técnica</h3>
           </li>
           <li>
               <p>Trabalho realizado para a disciplina de programação para internet</p>
