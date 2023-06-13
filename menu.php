@@ -49,7 +49,7 @@ if(isset($_POST["nomeJogador"])){
         <img src="imagens/taylormid.png" width="900" height="auto" alt="ícone de Taylor Swift">
   
     <!--Opções do menu-->
-    <form action="original.php" method="post">
+    <form action="realoficial.php" method="post">
     <section class="opcoes contpag">
     <div class="itens campo">  <!--Onde o jogador deve colocar seu nome-->  
         <input type="text" placeholder="Qual seu nome ?" name="nomeJogador" required>
@@ -63,43 +63,43 @@ if(isset($_POST["nomeJogador"])){
     </section>
 </section></form>
 
-<!--Rodapé (deve mostrar a equipe de devs)-->
- <footer>
+   <!--Rodapé (deve mostrar a equipe de devs)-->
+   <footer>
     <div id="footer_content">
       <div id="footer_contacts">
           <h1><img src="imagens/logo.png"  width="150" height="auto" alt="logo do quiz"></h1>
           <p>Conheça mais sobre a Taylor:</p>
-  
+ 
           <div id= "footer_social_media">
               <a href="https://www.instagram.com/taylorswift/" class="footer-link" id="instagram">
                   <i class="fa-brands fa-instagram"></i>
               </a>
-  
+ 
               <a href="https://www.youtube.com/@TaylorSwift" class="footer-link" id="youtube">
                   <i class="fa-brands fa-youtube"></i>
               </a>
-  
+ 
               <a href="https://twitter.com/taylorswift13" class="footer-link" id="twitter">
                     <i class="fa-brands fa-twitter"></i>
               </a>
           </div>
       </div>
-  
+ 
       <ul class="footer-list">
           <li>
               <h3>Desenvolvido por</h3>
           </li>
           <li>
-              <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZZzthsKLFKlgvhTndnzQSMvkLLKmRLBjLNCvmkxwfRDpZfVKjgVxcTXbMldWJQfwDwTgV" class="footer-link">Flávia Jamily</a>
+              <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsdDzZVhzWbvJxplVtLLlZbKRvnvrqcMjFqWKcDHLnBDLhHqhnmSnftJWZFMcQmXsHngwJLG" class="footer-link" target="blank">Flávia Jamily</a>
           </li>
           <li>
-              <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZZzthsKLFKlgvhTndnzQSMvkLLKmRLBjLNCvmkxwfRDpZfVKjgVxcTXbMldWJQfwDwTgV" class="footer-link">Isabel Natalia</a>
+              <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsdDzZVhzWbvJxplVtLLlZbKRvnvrqcMjFqWKcDHLnBDLhHqhnmSnftJWZFMcQmXsHngwJLG" class="footer-link" target="blank">Isabel Natalia</a>
           </li>
           <li>
-              <a href="https://mail.google.com/mail/u/1/#inbox?compose=CllgCJTHVrhzfknrDbfrVrskLQpkcLlWmSgnWJpjCQtPwkDCDGBXXwCgFjxwtRgKtBWxnjNFsGq" class="footer-link">Sarah Lima</a>
+              <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsdDzZVhzWbvJxplVtLLlZbKRvnvrqcMjFqWKcDHLnBDLhHqhnmSnftJWZFMcQmXsHngwJLG" class="footer-link" target="blank">Sarah Lima</a>
           </li>
       </ul>
-  
+ 
       <ul class="footer-list">
           <li>
               <h3>Créditos</h3>
@@ -119,7 +119,6 @@ if(isset($_POST["nomeJogador"])){
       </ul>
     </div>
   </footer>
-
 
 </body>
 </html>
