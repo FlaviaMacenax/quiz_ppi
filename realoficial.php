@@ -1,11 +1,24 @@
 <?php
 
+
 session_start();
     $valor = 0;
     $msg= "";
-    $pontos="";
+    $ponto= 0;
     $acertos = "";
+    $botao='';
     $validacao = "";
+
+
+    //Estrutura para fazer com que o botão passe para a próxima pergunta
+
+    if(isset($_POST['botao2'])){
+        $valor = $_POST['valor'] + 1;
+    }
+
+    if(isset($_POST["ponto"])){
+    }
+ 
 
     //Array contendo as perguntas
     $perguntas = array ("Qual a idade dela?", "Quando ela nasceu?", "Qual o apelido que os fãs brasileiros deram à Taylor Swift?",
@@ -14,8 +27,8 @@ session_start();
     "Qual é o nome da tour atual (maio/2023) que a Taylor está fazendo?", "Qual é o número da sorte da Srta. Swift?
     ", "Quantos grammys ela ganhou?"
     );
-    //Array das alternativas
-    $alternativas = array(
+    //Array das respostas
+    $respostas = array(
         array ("27 anos", "30 anos", "33 anos", "36 anos"),
         array ("13 de dezembro de 1989", "27 de março de 1986", "23 de outubro de 1989", "17 de fevereiro de 1986"),
         array ("Loirinha", "Loirona", "Lourena", "Loucona"),
@@ -28,58 +41,55 @@ session_start();
         array ("7", "8", "11", "12")
     );
 
-    //Array com a sequência de respostas
-    $posicaoRespostas = array(3, 1, 1, 2, 1, 2, 4, 3, 3, 4);
+
+    $posicao = array(3, 1, 1, 2, 1, 2, 4, 3, 3, 4);
+
+    function validarResposta($alternativa, $posicaoResposta, $i){
+        global $ponto;
+        
+           if ($alternativa==$posicaoResposta){
+               $ponto = $_POST["ponto"]+100;
+              return "Parabéns, você acertou e ganhou 100 pontos!!! :)";
+           }else{
+               $ponto = $_POST["ponto"];
+               return "Que pena, você errou e não ganhou pontos!!! :(";
+               }
+           }
+        
+        //Estrutura para mostrar se a questão marcada foi a correta ou errada, caso o usuário selecione o botão responder
+           if(isset($_POST["responder"])){
+               $botao = $_POST["responder"];
+               
+       //Chamando a função de validação da resposta
+               if(isset($_POST["res"])){
+                   $validacao= validarResposta($_POST["res"], $posicao[$valor], $_POST["ponto"] );
+                   //acho que isso resolve meus problemas $valor = $_POST["valor"]+1;
+                   }$msg=" ".$validacao;
+               }
+    //Função para exibir as perguntas
+    
 
 //Função para validar a resposta
-    function validarResposta($alternativa, $posicaoResposta){
-        if ($alternativa==posicaoResposta){
-            $pontos = $_POST["pontos"]+100;
-            $acertos = $_POST["acertos"]+1;
-            $msg = "Parabéns, você acertou e ganhou 100 pontos!!! :)";
-        }else{
-            $pontos= $_POST["pontos"];
-            $acertos = $_POST["acertos"];
-            $msg = "Que pena, você errou e não ganhou pontos!!! :("; 
-            }
-        }
-        
-     //Estrutura para mostrar se a questão marcada foi a correta ou errada, caso o usuário selecione o botão responder
-        if(isset($_POST["responder"])){
-            $botao = $_POST["responder"];
-            
-    //Chamando a função de validação da resposta
-            if(isset($_POST["alternativas"])){
-                $validacao= validarResposta($_POST["alternativas"], $posicaoRespostas[$valor]);
-                }
-            }
-
-
-    //Função para exibir as perguntas
-    function exibirQuestao($i){
-        global $perguntas, $alternativas, $msg;
+function exibirQuestao($i){
+    global $perguntas, $respostas, $ponto, $msg;
 ?>
-        <form action="tentativas.php" method="post"><br>
-        <?php echo $msg?>
-        <h1>Pergunta <?php echo $i+1?></h1>
-        <h2><?php echo $perguntas[$i]?></h2>
-        <input type="radio" name="alternativas" value="0"><?php echo($alternativas[$i][0])?></br>
-        <input type="radio" name="alternativas" value="1"><?php echo($alternativas[$i][1])?></br>
-        <input type="radio" name="alternativas" value="2"><?php echo($alternativas[$i][2])?></br>
-        <input type="radio" name="alternativas" value="3"><?php echo($alternativas[$i][3])?></br>
-        </form>
-<?php
-    }   
+    <form action="realoficial.php" method="post"><br>
+    <?php echo $msg?><br>
+    <h2><i class="fa-solid fa-trophy"></i><label>Pontos: <input type="text" name="ponto" value="<?php echo $ponto; ?>"</h2></label>
+    <h1>Pergunta <?php echo $i+1?></h1>
+    <h2><?php echo $perguntas[$i]?></h2>
+    <input type="radio" name="res" value="1"><?php echo($respostas[$i][0])?></br>
+    <input type="radio" name="res" value="2"><?php echo($respostas[$i][1])?></br>
+    <input type="radio" name="res" value="3"><?php echo($respostas[$i][2])?></br>
+    <input type="radio" name="res" value="4"><?php echo($respostas[$i][3])?></br>
+    <button name="responder" value="responder">Responder</button>
     
-//Estrurura para fazer com que o botão passe para a próxima pergunta
-if(isset($_POST['valor'])){
-    $valor = $_POST['valor'];
-    }
-    if(isset($_POST['botao2'])){
-        $valor = $_POST['valor'] + 1;
-    }
+</form>
+<?php
+}  
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -90,8 +100,8 @@ if(isset($_POST['valor'])){
      <!--Importação da fonte-->
      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
     <!--Importação dos ícones do rodapé-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--Ícone da barra do navegador-->
     <link rel="icon" type="image/x-icon" href="imagens/icon.png">
@@ -105,20 +115,12 @@ if(isset($_POST['valor'])){
      <header class="container">
       <div class="logo">
         <img src="imagens/logo.png" width="250" height="auto" alt="logo do quiz">
-      </div> 
+      </div>
     </header>
-
      <!--Exibe o nome do jogador-->
     <div class="icones contpag">
-        <h2><i class="fa-solid fa-user"></i> 
+        <h2><i class="fa-solid fa-user"></i>
         <?php echo "Jogador: " . $_SESSION["nomeJogador"];?>
-    </h2>
-    </div>
-
-    <!--Exibe a quantidade de pontos-->
-    <div class="icones contpag">
-        <h2><i class="fa-solid fa-trophy"></i>
-        <?php echo "Pontos: " . $pontos;?>
     </h2>
     </div>
 
@@ -126,11 +128,11 @@ if(isset($_POST['valor'])){
         <?php exibirQuestao($valor);?><br>
         </div>
 
+
     <div class="contpag">
-    <form action="tentativas.php" method="post">
+    <form action="realoficial.php" method="post">
         <input type="hidden" name="valor" value="<?php echo $valor ?>">
-        <button name="responder" value="responder">Responder</button><br>
-        <button name="botao2" value="+">Próxima</button>
+        <button name="botao2" value="+">Próxima</button><br>
     </form></div>
 
     <!--Rodapé (deve mostrar a equipe de devs)-->
@@ -139,22 +141,22 @@ if(isset($_POST['valor'])){
       <div id="footer_contacts">
           <h1><img src="imagens/logo.png"  width="150" height="auto" alt="logo do quiz"></h1>
           <p>Conheça mais sobre a Taylor:</p>
-  
+ 
           <div id= "footer_social_media">
               <a href="https://www.instagram.com/taylorswift/" class="footer-link" id="instagram">
                   <i class="fa-brands fa-instagram"></i>
               </a>
-  
+ 
               <a href="https://www.youtube.com/@TaylorSwift" class="footer-link" id="youtube">
                   <i class="fa-brands fa-youtube"></i>
               </a>
-  
+ 
               <a href="https://twitter.com/taylorswift13" class="footer-link" id="twitter">
                     <i class="fa-brands fa-twitter"></i>
               </a>
           </div>
       </div>
-  
+ 
       <ul class="footer-list">
           <li>
               <h3>Desenvolvido por</h3>
@@ -169,7 +171,7 @@ if(isset($_POST['valor'])){
               <a href="https://mail.google.com/mail/u/1/#inbox?compose=CllgCJTHVrhzfknrDbfrVrskLQpkcLlWmSgnWJpjCQtPwkDCDGBXXwCgFjxwtRgKtBWxnjNFsGq" class="footer-link">Sarah Lima</a>
           </li>
       </ul>
-  
+ 
       <ul class="footer-list">
           <li>
               <h3>Créditos</h3>
@@ -189,5 +191,7 @@ if(isset($_POST['valor'])){
       </ul>
     </div>
   </footer>
+
+
 </body>
 </html>
