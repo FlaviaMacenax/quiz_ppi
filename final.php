@@ -8,47 +8,38 @@ $txtPts = "";
 // Mensagens para acertos:
 
 if ($_SESSION["acertos"] == 0) {
-    $txtActs = "Que pena! Você não acertou nenhuma das questões";
+    $txtActs = "Que pena! Você não acertou nenhuma das questões ";
 }
 
-if ($_SESSION["acertos"] >= 3) {
-    $txtActs = "Boa tentativa, mas você acertou " . echo $_SESSION["acertos"] . " das 10 questões ";
+if ($_SESSION["acertos"] >= 1 && $_SESSION["acertos"] <= 4) {
+    $txtActs = "Olha só! Você acertou " . $_SESSION["acertos"] . " questões de 10 ";
 }
 
-if ($_SESSION["acertos"] >= 6) {
-    $txtActs = "Olha só! Você acertou " . echo $_SESSION["acertos"] . " das 10 questões ";
+if ($_SESSION["acertos"] >= 5 && $_SESSION["acertos"] <= 7) {
+    $txtActs = "Uau! Você acertou " . $_SESSION["acertos"] . " questões de 10 ";
 }
 
-if ($_SESSION["acertos"] >= 9) {
-    $txtActs = "Uau! Você acertou " . echo $_SESSION["acertos"] . "das 10 questões ";
-}
-
-if ($_SESSION["acertos"] == 10) {
-    $txtActs = "Parabéns!! Você acertou todas as questões";
+if ($_SESSION["acertos"] >= 8 && $_SESSION["acertos"] <= 10) {
+    $txtActs = "Parabéns!! Você acertou " . $_SESSION["acertos"] . " questões de 10 ";
 }
 
 //Mensagens para pontos:
 
-if ($_SESSION["pontos"] == 0) {
-    $txtPts = "e não ganhou nenhum ponto. Tente novamente!";
+if ($_SESSION["ponto"] == 0) {
+    $txtPts = "e não ganhou nenhum ponto. Mas você pode tentar novamente!";
 }
 
-if (0 < $_SESSION["pontos"] >= 300) {
-    $txtPts = "e acumulou " . echo $_SESSION["pontos"] . " pontos. Você ainda pode melhorar se tentar novamente!";
+if ($_SESSION["ponto"] >= 100 && $_SESSION["ponto"] <= 400) {
+    $txtPts = "e acumulou " . $_SESSION["ponto"] . " pontos. Você foi bem, mas pode se dar melhor se tentar novamente!";
 }
 
-if (500 < $_SESSION["pontos"] >= 600) {
-    $txtPts = "e acumulou " . echo $_SESSION["pontos"] . " pontos. Você está indo bem!";
+if ($_SESSION["ponto"] >= 500 && $_SESSION["ponto"] <= 700) {
+    $txtPts = "e acumulou " . $_SESSION["ponto"] . " pontos. Você foi ótimo(a)!";
 }
 
-if (700 < $_SESSION["pontos"] >= 900) {
-    $txtPts = "e acumulou " . echo $_SESSION["pontos"] . " pontos. Você foi ótimo/a!";
+if ($_SESSION["ponto"] >= 800 && $_SESSION["ponto"] <= 1000) {
+    $txtPts = "e acumulou " . $_SESSION["ponto"] . " pontos. Você é um(a) verdadeiro(a) Swifter!";
 }
-
-if ($_SESSION["pontos"] == 1000) {
-    $txtPts = "e acumulou 100 pontos. Você é um/a verdadeiro/a Swifter!";
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +51,7 @@ if ($_SESSION["pontos"] == 1000) {
     <title>Fim do Quiz!</title>
 </head>
 <body>
-    
+   
     <div class = "mesagem-final">
         <h1>Você chegou ao final do quiz, <?php echo $_SESSION["nomeJogador"];?>!</h1>
     </div>
