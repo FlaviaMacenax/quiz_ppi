@@ -24,7 +24,7 @@ session_start();
     $perguntas = array ("Qual a idade dela?", "Quando ela nasceu?", "Qual o apelido que os fãs brasileiros deram à Taylor Swift?",
     "Quantos álbuns de estúdio da Taylor foram lançados até agora?", "Qual é o nome do primeiro álbum da cantora?
     ", "Qual foi o último relacionamento da Taylor?", "Qual foi o álbum mais vendido da Taylor?",
-    "Qual é o nome da tour atual (maio/2023) que a Taylor está fazendo?", "Qual é o número da sorte da Srta. Swift?
+    "Qual é o nome da tour atual que a Taylor está fazendo?", "Qual seu número da sorte?
     ", "Quantos grammys ela ganhou?"
     );
     //Array das respostas
@@ -76,12 +76,21 @@ function exibirQuestao($i){
     <form action="realoficial.php" method="post"><br>
     <?php echo $msg?><br>
     <h2><i class="fa-solid fa-trophy"></i><label>Pontos: <input type="text" name="ponto" value="<?php echo $ponto; ?>"</h2></label>
-    <h1>Pergunta <?php echo $i+1?></h1>
-    <h2><?php echo $perguntas[$i]?></h2>
-    <input type="radio" name="res" value="1"><?php echo($respostas[$i][0])?></br>
-    <input type="radio" name="res" value="2"><?php echo($respostas[$i][1])?></br>
-    <input type="radio" name="res" value="3"><?php echo($respostas[$i][2])?></br>
-    <input type="radio" name="res" value="4"><?php echo($respostas[$i][3])?></br>
+    <h1 class="perg" >Pergunta <?php echo $i+1?></h1>
+    <h2 class="pergunta"><?php echo $perguntas[$i]?></h2>
+    <div class="alternativa">
+        <input type="radio" name="res" value="1"><?php echo($respostas[$i][0])?></br>
+    </div>
+    <div class="alternativa">
+        <input type="radio" name="res" value="2"><?php echo($respostas[$i][1])?></br>
+    </div>
+    <div class="alternativa">
+        <input type="radio" name="res" value="3"><?php echo($respostas[$i][2])?></br>
+    </div>
+    <div class="alternativa">
+        <input type="radio" name="res" value="4"><?php echo($respostas[$i][3])?></br>
+    </div>
+    
     <button name="responder" value="responder">Responder</button>
     
 </form>
@@ -123,11 +132,9 @@ function exibirQuestao($i){
         <?php echo "Jogador: " . $_SESSION["nomeJogador"];?>
     </h2>
     </div>
-
         <div class="perguntas contpag">
         <?php exibirQuestao($valor);?><br>
         </div>
-
 
     <div class="contpag">
     <form action="realoficial.php" method="post">
