@@ -1,26 +1,22 @@
 <?php
-
-
 session_start();
-    $valor = 0;
-    $msg= "";
-    $ponto= 0;
-    $acertos = "";
-    $botao='';
-    $validacao = "";
+
+$msg='';
+$validacao="";
+$ponto=0;
+$valor = 0;
+$botao = "";
 
 
-    //Estrutura para fazer com que o botão passe para a próxima pergunta
-
-    if(isset($_POST['botao2'])){
-        $valor = $_POST['valor'] + 1;
+if(isset($_POST["valor"])){
+    $valor = $_POST["valor"];
     }
 
     if(isset($_POST["ponto"])){
-    }
- 
 
-    //Array contendo as perguntas
+        }
+
+//Array contendo as perguntas
     $perguntas = array ("Qual a idade dela?", "Quando ela nasceu?", "Qual o apelido que os fãs brasileiros deram à Taylor Swift?",
     "Quantos álbuns de estúdio da Taylor foram lançados até agora?", "Qual é o nome do primeiro álbum da cantora?
     ", "Qual foi o último relacionamento da Taylor?", "Qual foi o álbum mais vendido da Taylor?",
@@ -41,55 +37,50 @@ session_start();
         array ("7", "8", "11", "12")
     );
 
-
     $posicao = array(3, 1, 1, 2, 1, 2, 4, 3, 3, 4);
 
-    function validarResposta($alternativa, $posicaoResposta, $i){
-        global $ponto;
-        
-           if ($alternativa==$posicaoResposta){
-               $ponto = $_POST["ponto"]+100;
-              return "Parabéns, você acertou e ganhou 100 pontos!!! :)";
-           }else{
-               $ponto = $_POST["ponto"];
-               return "Que pena, você errou e não ganhou pontos!!! :(";
-               }
-           }
-        
-        //Estrutura para mostrar se a questão marcada foi a correta ou errada, caso o usuário selecione o botão responder
-           if(isset($_POST["responder"])){
-               $botao = $_POST["responder"];
-               
-       //Chamando a função de validação da resposta
-               if(isset($_POST["res"])){
-                   $validacao= validarResposta($_POST["res"], $posicao[$valor], $_POST["ponto"] );
-                   //acho que isso resolve meus problemas $valor = $_POST["valor"]+1;
-                   }$msg=" ".$validacao;
-               }
-    //Função para exibir as perguntas
-    
+                function validarResposta($alternativa, $posicaoResposta, $i){
+                   global $ponto;
+                    if($alternativa==$posicaoResposta){
+                        $ponto = $_POST["ponto"]+100;
+                        return "Parabéns, você acertou a questão anterior e ganhou +100 pontos. <br>";
+                    }else{
+                        $ponto= $_POST["ponto"];
+                        return "Que pena, você errou e não marcou pontos. <br>";}
+                    }
 
-//Função para validar a resposta
+//Estrutura para mostrar se a questão marcada foi a correta ou errada, caso o usuário selecione o botão responder
+    if(isset($_POST["responder"])){
+        $botao = $_POST["responder"];
+
+//Chamando a função de validação da resposta
+if(isset($_POST["res"])){
+    $validacao= validarResposta($_POST["res"], $posicao[$valor], $_POST["ponto"]);
+    $valor = $_POST["valor"]+1;
+    }$msg= " ".$validacao;
+        }
+
+       //Função para exibir as perguntas
 function exibirQuestao($i){
-        global $perguntas, $respostas, $ponto, $msg;
+    global $perguntas, $respostas, $valor, $ponto, $msg;
 ?>
-        <form action="realoficial.php" method="post"><br>
-        <?php echo $msg?><br>
-        <h2><i class="fa-solid fa-trophy"></i><label>Pontos: <input type="text" name="ponto" value="<?php echo $ponto; ?>"</h2></label>
-        <h1>Pergunta <?php echo $i+1?></h1>
-        <h2><?php echo $perguntas[$i]?></h2>
-        <input type="radio" name="res" value="1"><?php echo($respostas[$i][0])?></br>
-        <input type="radio" name="res" value="2"><?php echo($respostas[$i][1])?></br>
-        <input type="radio" name="res" value="3"><?php echo($respostas[$i][2])?></br>
-        <input type="radio" name="res" value="4"><?php echo($respostas[$i][3])?></br>
-        <button name="responder" value="responder">Responder</button>
-        
+    <form action="teste.php" method="post">
+        <?php echo $msg?>
+        <h2><i class="fa-solid fa-trophy"></i><label> Pontos: <input type="text" name="ponto" value="<?php echo $ponto; ?>"></h2></label>
+        <h1><?php echo ($perguntas[$i])?></h1>
+        <label><input type="hidden" name="valor" value="<?php echo $valor; ?>"></label>
+        <br>
+        <input type="radio" name="res" value="1" required><?php echo($respostas[$i][0])?></br>
+        <input type="radio" name="res" value="2" required><?php echo($respostas[$i][1])?></br>
+        <input type="radio" name="res" value="3" required><?php echo($respostas[$i][2])?></br>
+        <input type="radio" name="res" value="4" required><?php echo($respostas[$i][3])?></br>
+        <br>
+        <input type="submit" name= "responder" value="Responder">
     </form>
+
 <?php
-    }  
-
+}
 ?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -128,12 +119,6 @@ function exibirQuestao($i){
         <?php exibirQuestao($valor);?><br>
         </div>
 
-
-    <div class="contpag">
-    <form action="realoficial.php" method="post">
-        <input type="hidden" name="valor" value="<?php echo $valor ?>">
-        <button name="botao2" value="+">Próxima</button><br>
-    </form></div>
 
     <!--Rodapé (deve mostrar a equipe de devs)-->
  <footer>
