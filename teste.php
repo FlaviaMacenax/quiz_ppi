@@ -58,10 +58,10 @@ if(isset($_POST["valor"])){
                     if($alternativa==$posicaoResposta){
                         $ponto = $_POST["ponto"]+100;
                         $acertos = $_POST["acertos"]+1;
-                        return "Parabéns, você acertou a questão anterior e ganhou +100 pontos :). <br>";
+                        return "Parabéns, você acertou a questão anterior e ganhou +100 pontos :) <br>";
                     }else{
                         $ponto= $_POST["ponto"];
-                        return "Que pena, você errou e não marcou pontos :(. <br>";}
+                        return "Que pena, você errou e não marcou pontos :( <br>";}
                     }
 
 //Estrutura para mostrar se a questão marcada foi a correta ou errada, caso o usuário selecione o botão responder
