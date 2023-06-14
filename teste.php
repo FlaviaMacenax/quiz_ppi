@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 $msg="";
@@ -98,16 +99,16 @@ function exibirQuestao($i){
         <input type="hidden" name="acertos" value="<?php echo $acertos; ?>">
     
         <div class="alternativa custom-radio">
-        <input type="radio" id="radio-1" name="res" value="1" required><label for="radio-1"><?php echo($respostas[$i][0])?></label></br>
+        <input type="radio" id="radio-1" name="res" value="1"><label for="radio-1"><?php echo($respostas[$i][0])?></label></br> 
         </div>
         <div class="alternativa custom-radio">
-        <input type="radio" id="radio-2" name="res" value="2" required><label for="radio-2"><?php echo($respostas[$i][1])?></label></br>
+        <input type="radio" id="radio-2" name="res" value="2"><label for="radio-2"><?php echo($respostas[$i][1])?></label></br>
         </div>
         <div class="alternativa custom-radio">
-        <input type="radio" id="radio-3" name="res" value="3" required><label for="radio-3"><?php echo($respostas[$i][2])?></label></br>
+        <input type="radio" id="radio-3" name="res" value="3"><label for="radio-3"><?php echo($respostas[$i][2])?></label></br>
         </div>
         <div class="alternativa custom-radio ">
-        <input type="radio" id="radio-4" name="res" value="4" required><label for="radio-4"><?php echo($respostas[$i][3])?></label></br>
+        <input type="radio" id="radio-4" name="res" value="4"><label for="radio-4"><?php echo($respostas[$i][3])?></label></br>
         </div>
         <?php if(!$foirespondido){ ?>
             <input id="responder" type="submit" name= "responder" value="Responder">
