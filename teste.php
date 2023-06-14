@@ -6,6 +6,7 @@ $validacao="";
 $ponto=0;
 $valor = 0;
 $botao = "";
+$acertos = "";
 
 
 if(isset($_POST["valor"])){
@@ -13,6 +14,16 @@ if(isset($_POST["valor"])){
     }
     if(isset($_POST["ponto"])){
         }
+        if(isset($_POST["acertos"])){
+        }
+        if(isset($_POST["ponto"])){
+            $ponto = $_POST["ponto"];
+            $_SESSION ["ponto"] = $ponto;
+          }
+          if(isset($_POST["acertos"])){
+            $acertos = $_POST["acertos"];
+            $_SESSION ["acertos"] = $acertos;
+          }
 
 //Array contendo as perguntas
     $perguntas = array ("Qual a idade dela?", 
@@ -43,9 +54,10 @@ if(isset($_POST["valor"])){
     $posicao = array(3, 1, 1, 2, 1, 2, 4, 3, 3, 4);
 
                 function validarResposta($alternativa, $posicaoResposta, $i){
-                   global $ponto;
+                   global $ponto, $acertos;
                     if($alternativa==$posicaoResposta){
                         $ponto = $_POST["ponto"]+100;
+                        $acertos = $_POST["acertos"]+1;
                         return "Parabéns, você acertou a questão anterior e ganhou +100 pontos :). <br>";
                     }else{
                         $ponto= $_POST["ponto"];
@@ -65,13 +77,14 @@ if(isset($_POST["res"])){
 
        //Função para exibir as perguntas
 function exibirQuestao($i){
-    global $perguntas, $respostas, $valor, $ponto, $msg;
+    global $perguntas, $respostas, $valor, $ponto, $msg, $acertos;
 ?>
     <form action="teste.php" method="post">
         <?php echo $msg?>
         <h2><i class="fa-solid fa-trophy"></i><label> Pontos: </label><input type="text" name="ponto" value="<?php echo $ponto; ?>" readonly></h2>
         <h1><?php echo ($perguntas[$i])?></h1>
         <label><input type="hidden" name="valor" value="<?php echo $valor; ?>"></label>
+        <label><input type="hidden" name="acertos" value="<?php echo $acertos; ?>"></label>
         <br>
         <input type="radio" name="res" value="1" required><?php echo($respostas[$i][0])?></br>
         <input type="radio" name="res" value="2" required><?php echo($respostas[$i][1])?></br>
@@ -82,6 +95,9 @@ function exibirQuestao($i){
     </form>
 
 <?php
+if($i==9){
+    echo '<a href="final.php"><button>Resultado do Quiz</button></a>';
+}
 }
 ?>
 
