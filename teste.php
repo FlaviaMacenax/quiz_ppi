@@ -6,7 +6,7 @@ $validacao="";
 $ponto=0;
 $valor = 0;
 $botao = "";
-$acertos = "";
+$acertos = 0;
 
 
 if(isset($_POST["valor"])){
@@ -84,7 +84,7 @@ function exibirQuestao($i){
         <h2><i class="fa-solid fa-trophy"></i><label> Pontos: </label><input type="text" name="ponto" value="<?php echo $ponto; ?>" readonly></h2>
         <h1><?php echo ($perguntas[$i])?></h1>
         <label><input type="hidden" name="valor" value="<?php echo $valor; ?>"></label>
-        <label><input type="hidden" name="acertos" value="<?php echo $acertos; ?>"></label>
+        <input type="hidden" name="acertos" value="<?php echo $acertos; ?>">
         <br>
         <input type="radio" name="res" value="1" required><?php echo($respostas[$i][0])?></br>
         <input type="radio" name="res" value="2" required><?php echo($respostas[$i][1])?></br>
@@ -95,7 +95,7 @@ function exibirQuestao($i){
     </form>
 
 <?php
-if($i==9){
+if($valor==9){
     echo '<a href="final.php"><button>Resultado do Quiz</button></a>';
 }
 }
