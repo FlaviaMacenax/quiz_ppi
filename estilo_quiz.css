@@ -153,6 +153,7 @@
         font-size: 15px;
         font-weight: bold;
         box-shadow: 10px 5px 5px #1C2029;
+        transition: all 0.4s ease;
    }
    
         .voltar a{
@@ -163,6 +164,8 @@
 
         .voltar a:hover{
             color: #303650;
+            margin-left: 20px;
+            padding-right: 15px;
 }
 
    
