@@ -8,6 +8,8 @@ $valor = 0;
 $botao = "";
 $acertos = 0;
 
+$foirespondido=false;
+
 
 if(isset($_POST["valor"])){
     $valor = $_POST["valor"];
@@ -53,31 +55,39 @@ if(isset($_POST["valor"])){
 
     $posicao = array(3, 1, 1, 2, 1, 2, 4, 3, 3, 4);
 
-                function validarResposta($alternativa, $posicaoResposta, $i){
-                   global $ponto, $acertos;
-                    if($alternativa==$posicaoResposta){
-                        $ponto = $_POST["ponto"]+100;
-                        $acertos = $_POST["acertos"]+1;
-                        return "Parabéns, você acertou a questão anterior e ganhou +100 pontos 🥳 <br>";
-                    }else{
-                        $ponto= $_POST["ponto"];
-                        return "Que pena, você errou e não marcou pontos ☹️<br>";}
-                    }
+    function validarResposta($alternativa, $posicaoResposta, $i){
+        global $ponto, $acertos;
+        if($alternativa==$posicaoResposta){
+            $ponto = $_POST["ponto"]+100;
+            $acertos = $_POST["acertos"]+1;
+            return "Parabéns, você acertou a questão anterior e ganhou +100 pontos 🥳 <br>";
+        }else{
+            $ponto= $_POST["ponto"];
+            return "Que pena, você errou e não marcou pontos ☹️<br>";}
+        }
+
+if(isset($_POST["proxima"])){
+    $valor = $_POST["valor"]+1;
+}
 
 //Estrutura para mostrar se a questão marcada foi a correta ou errada, caso o usuário selecione o botão responder
-    if(isset($_POST["responder"])){
-        $botao = $_POST["responder"];
+if(isset($_POST["responder"])){
+    $botao = $_POST["responder"];
 
-//Chamando a função de validação da resposta
-if(isset($_POST["res"])){
-    $validacao= validarResposta($_POST["res"], $posicao[$valor], $_POST["ponto"]);
-    $valor = $_POST["valor"]+1;
-    }$msg= " ".$validacao;
-        }
+    //Chamando a função de validação da resposta
+    if(isset($_POST["res"])){
+        $validacao= validarResposta($_POST["res"], $posicao[$valor], $_POST["ponto"]);
+        //$valor = $_POST["valor"]+1;
+        $foirespondido = true;
+    }
+    
+    $msg= " ".$validacao;
+
+}
 
        //Função para exibir as perguntas
 function exibirQuestao($i){
-    global $perguntas, $respostas, $valor, $ponto, $msg, $acertos;
+    global $perguntas, $respostas, $valor, $ponto, $msg, $acertos, $foirespondido;
 ?>
     <form action="teste.php" method="post">
         <?php echo "<div class=\"valid\">", $msg ,"</div>"; ?><br>
@@ -99,7 +109,12 @@ function exibirQuestao($i){
         <div class="alternativa custom-radio ">
         <input type="radio" id="radio-4" name="res" value="4" required><label for="radio-4"><?php echo($respostas[$i][3])?></label></br>
         </div>
-        <input id="responder" type="submit" name= "responder" value="Responder">
+        <?php if(!$foirespondido){ ?>
+            <input id="responder" type="submit" name= "responder" value="Responder">
+        <?php } ?>
+        <?php if($foirespondido){ ?>
+            <input id="proxima" type="submit" name= "proxima" value="Próxima">
+        <?php } ?>
     </form>
 
 <?php
