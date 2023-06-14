@@ -71,7 +71,7 @@ session_start();
 
 //Função para validar a resposta
 function exibirQuestao($i){
-    global $perguntas, $respostas, $ponto, $msg;
+        global $perguntas, $respostas, $ponto, $msg;
 ?>
     <form action="realoficial.php" method="post"><br>
     <?php echo $msg?><br>
@@ -105,7 +105,7 @@ function exibirQuestao($i){
     
 </form>
 <?php
-}  
+    }  
 
 ?>
 
