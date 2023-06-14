@@ -28,13 +28,13 @@ if(isset($_POST["valor"])){
 //Array contendo as perguntas
     $perguntas = array ("Qual a idade dela?", 
     "Quando ela nasceu?", 
-    "Qual o apelido que os fãs brasileiros deram à Taylor Swift?",
-    "Quantos álbuns de estúdio da Taylor foram lançados até agora?", 
-    "Qual é o nome do primeiro álbum da cantora?", 
-    "Qual foi o último relacionamento da Taylor?", 
-    "Qual foi o álbum mais vendido da Taylor?",
-    "Qual é o nome da tour atual (maio/2023) que a Taylor está fazendo?",
-    "Qual é o número da sorte da Srta. Swift?", 
+    "Qual o apelido que os fãs brasileiros deram à cantora?",
+    "Quantos álbuns de estúdio da Taylor foram lançados?", 
+    "Qual é o nome do primeiro álbum da artista?", 
+    "Com que foi seu último relacionamento?", 
+    "Qual foi o álbum mais vendido da cantora?",
+    "Qual é o nome da tour atual da Taylor?",
+    "Qual seu número da sorte?", 
     "Quantos grammys ela ganhou?"
     );
     //Array das respostas
@@ -81,18 +81,25 @@ function exibirQuestao($i){
 ?>
     <form action="teste.php" method="post">
         <?php echo $msg?>
-        <h2><i class="fa-solid fa-trophy"></i><label> Pontos: </label><input type="text" name="ponto" value="<?php echo $ponto; ?>" readonly></h2>
-        <h1>Pergunta <?php echo $i+1?></h1>
-        <h1><?php echo ($perguntas[$i])?></h1>
+        <h2 class="pontos" ><i class="fa-solid fa-trophy"></i><label> Pontos: </label><input type="text" name="ponto" value="<?php echo $ponto; ?>" readonly></h2>
+        <h1 class="perg" >Pergunta <?php echo $i+1?><i class="fa-solid fa-circle-question fa-bounce inter"></i></h1>
+        <h1 class="pergunta"><?php echo ($perguntas[$i])?></h1>
         <label><input type="hidden" name="valor" value="<?php echo $valor; ?>"></label>
         <input type="hidden" name="acertos" value="<?php echo $acertos; ?>">
-        <br>
-        <input type="radio" name="res" value="1" required><?php echo($respostas[$i][0])?></br>
-        <input type="radio" name="res" value="2" required><?php echo($respostas[$i][1])?></br>
-        <input type="radio" name="res" value="3" required><?php echo($respostas[$i][2])?></br>
-        <input type="radio" name="res" value="4" required><?php echo($respostas[$i][3])?></br>
-        <br>
-        <input type="submit" name= "responder" value="Responder">
+    
+        <div class="alternativa custom-radio">
+        <input type="radio" id="radio-1" name="res" value="1" required><label for="radio-1"><?php echo($respostas[$i][0])?></label></br>
+        </div>
+        <div class="alternativa custom-radio">
+        <input type="radio" id="radio-2" name="res" value="2" required><label for="radio-2"><?php echo($respostas[$i][1])?></label></br>
+        </div>
+        <div class="alternativa custom-radio">
+        <input type="radio" id="radio-3" name="res" value="3" required><label for="radio-3"><?php echo($respostas[$i][2])?></label></br>
+        </div>
+        <div class="alternativa custom-radio ">
+        <input type="radio" id="radio-4" name="res" value="4" required><label for="radio-4"><?php echo($respostas[$i][3])?></label></br>
+        </div>
+        <input id="responder" type="submit" name= "responder" value="Responder">
     </form>
 
 <?php
