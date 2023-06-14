@@ -58,10 +58,10 @@ if(isset($_POST["valor"])){
                     if($alternativa==$posicaoResposta){
                         $ponto = $_POST["ponto"]+100;
                         $acertos = $_POST["acertos"]+1;
-                        return "Parabéns, você acertou a questão anterior e ganhou +100 pontos :) <br>";
+                        return "Parabéns, você acertou a questão anterior e ganhou +100 pontos 🥳 <br>";
                     }else{
                         $ponto= $_POST["ponto"];
-                        return "Que pena, você errou e não marcou pontos :( <br>";}
+                        return "Que pena, você errou e não marcou pontos ☹️<br>";}
                     }
 
 //Estrutura para mostrar se a questão marcada foi a correta ou errada, caso o usuário selecione o botão responder
@@ -80,7 +80,7 @@ function exibirQuestao($i){
     global $perguntas, $respostas, $valor, $ponto, $msg, $acertos;
 ?>
     <form action="teste.php" method="post">
-        <?php echo $msg?>
+        <?php echo "<div class=\"valid\">", $msg ,"</div>"; ?><br>
         <h2 class="pontos" ><i class="fa-solid fa-trophy"></i><label> Pontos: </label><input type="text" name="ponto" value="<?php echo $ponto; ?>" readonly></h2>
         <h1 class="perg" >Pergunta <?php echo $i+1?><i class="fa-solid fa-circle-question fa-bounce inter"></i></h1>
         <h1 class="pergunta"><?php echo ($perguntas[$i])?></h1>

@@ -293,6 +293,10 @@
         box-sizing: border-box;
         border: 10px solid #6173cec3;
         padding: 4px;
+    }
+
+    .valid{
+        color: #f5f5f5;
 }
 
 
