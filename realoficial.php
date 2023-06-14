@@ -92,6 +92,16 @@ function exibirQuestao($i){
     </div>
     
     <button name="responder" value="responder">Responder</button>
+ 
+    <div class="custom-radio">
+      <input id="radio-1" name="question" value="1" type="radio">
+      <label for="radio-1">Sim</label>
+    </div>
+    
+    <div class="custom-radio">
+      <input id="radio-2" name="question" value="0" type="radio">
+      <label for="radio-2">Não</label>
+    </div>
     
 </form>
 <?php
