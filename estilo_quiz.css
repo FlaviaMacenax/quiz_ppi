@@ -182,6 +182,7 @@
         color: #ffffff;
         margin-top: 25px;
         margin-bottom: 25px;
+        margin-right: 10px;
     }
 
     .pergunta{
@@ -204,7 +205,6 @@
         text-align: center;
     }
 
-
     .alternativa{
         color: #f5f5f5;
         background-color: #92a2e8;
@@ -223,21 +223,38 @@
     .inter{
         color: #f5f5f5;
         margin-left: 15px;
-}
+    }
+
+    .pontos{
+        color: #f5f5f5;
+    }
+
+    .pontos input{
+        width: 50px;
+        background-color: #303650;
+        color: #61ce90;
+        font-family: 'Playfair Display', serif;
+        font-size: 25px;
+        border-radius: 15px;
+        outline: none;
+        border: 2px solid transparent;
+        transition: all 0.4s ease; 
+    }
+
+  
 
 
 .custom-radio input{
   display: none;
 }
 
-
 .custom-radio input + label:before {
   content: '';
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: rgba(156, 156, 190, 0.32);
-  border: 1px solid gray;
+  background-color: rgba(145, 145, 192, 0.32);
+  border: 1px solid #6173ce;
   display: inline-block;
   vertical-align: middle;
   margin-right: 8px;
@@ -247,9 +264,12 @@
 .custom-radio input:checked + label:before {
   background-color: white;
   box-sizing: border-box;
-  border: 5px solid red;
+  border: 5px solid #92a2e8;
   padding: 4px;
 }
+
+
+
 
 /*Footer*/
     * {
