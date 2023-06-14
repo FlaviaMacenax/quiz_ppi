@@ -52,7 +52,7 @@ if(isset($_POST["nomeJogador"])){
     <form action="realoficial.php" method="post">
     <section class="opcoes contpag">
     <div class="itens campo">  <!--Onde o jogador deve colocar seu nome-->  
-        <input type="text" placeholder="Qual seu nome ?" name="nomeJogador" required>
+        <input type="text" id="nome" placeholder="QUAL SEU NOME?" name="nomeJogador" required>
     </div>
     <div class="itens">
             <a href="original.php"><button name="enviar">Iniciar jogo</button></a> <!--Direciona o jogador para as perguntas-->
@@ -102,7 +102,7 @@ if(isset($_POST["nomeJogador"])){
  
       <ul class="footer-list">
           <li>
-              <h3>Créditos</h3>
+              <h3>Ficha técnica</h3>
           </li>
           <li>
               <p>Trabalho realizado para a disciplina de programação para internet</p>

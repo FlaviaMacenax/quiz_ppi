@@ -1,112 +1,118 @@
 /*Configurações comuns a todo o corpo do quiz*/
     body{
-    margin: 0;
-    padding: 0;
-    background-image: url(imagens/fundo.png);
-    font-family: 'Playfair Display', serif;
-    }
+        margin: 0;
+        padding: 0;
+        background-image: url(imagens/fundo.png);
+        font-family: 'Playfair Display', serif;
+}
  
 /*Personalização da barra*/
     ::-webkit-scrollbar{
-    width: 15px;
-    background-color: #1C2029;
+        width: 15px;
+        background-color: #1C2029;
     }
 
         ::-webkit-scrollbar-thumb{
-        width: 15px;
-        background-color: #92a2e8;
+            width: 15px;
+            background-color: #92a2e8;
         }
 
     .container{
-    max-width: 830px;
-    margin: auto;
-    }
+        max-width: 830px;
+        margin: auto;
+}
 
  /*Cabeçalho*/
     header .logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 35px;
-    }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 35px;
+}
 
 /*Geral*/
    .contpag{
-    max-width: 1000px;
-    margin: auto;
-    }
+        max-width: 1000px;
+        margin: auto;
+}
 
-
+ /*PÁGINA INICIAL*/
  /*Parte principal do menu*/
     .secao-1{
-    display: flex;
-    margin-top: 50px;
+        display: flex;
+        margin-top: 50px;
    }
 
         .secao-1 img{
-        margin-left: -350px;
+         margin-left: -350px;
         }
 
         .secao-2{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-bottom: 50px;
-        margin-top: 75px;
-        }
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 50px;
+            margin-top: 75px;
+}
  
   /*Opções do menu*/
   .opcoes{
-    display: flex;
-    flex-direction: column;
-    margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
    }
 
         .itens{
-        background-color: #92a2e8;
-        width: 500px;
-        height: auto;
-        display: flex;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        margin-top: 25px;
-        margin-bottom: 25px;
-        margin-left: -100px;
-        padding-left: 155px;
-        text-align: center;
-        border-radius: 50px;
-        text-transform: uppercase;
-        font-size: 25px;
-        font-weight: bold;
-        box-shadow: 15px 5px 5px #1C2029;
+            background-color: #92a2e8;
+            width: 500px;
+            height: auto;
+            display: flex;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+             margin-left: -100px;
+            padding-left: 155px;
+            text-align: center;
+            border-radius: 50px;
+            text-transform: uppercase;
+            font-size: 25px;
+            font-weight: bold;
+            box-shadow: 15px 5px 5px #1C2029;
         }
 
         .itens a{
-        color: #ffff;
-        text-decoration: none;
-        transition: 0.3s;
+            color: #ffff;
+            text-decoration: none;
+            transition: 0.3s;
         }
 
         .itens a:hover{
-        color: #303650;
-        }
+            color: #303650;
+}
 
-/*Input e botão da página inicial*/
+/*Input e botão*/
         .campo input{
-            width: 50%;
+            width: 60%;
             height: 25px;
-           background-color: rgba(255, 255, 255, 0.32);
-           border-radius: 20px;
+           background-color: #92a2e8;
+           font-family: 'Playfair Display', serif;
+           border-radius: 15px;
            outline: none;
            border: 2px solid transparent;
-           padding: 15px;
-           font-size: 15px;
+           font-size: 20px;
            color: #ffff;
            transition: all 0.4s ease;
+           margin-right: 75px;
         }
         
         .campo input:focus{
-            border-color: #303650;
+            border: dotted #6173ce;
+        }
+
+        #nome::placeholder {
+            color: #f5f5f5;
+            font-weight: bold;
         }
     
         .itens button{
@@ -125,36 +131,37 @@
         
         .itens button:hover {
            color: #303650;
-         }
+}
 
-/*Botão voltar da página de instruções*/
+/*PÁGINA DE INSTRUÇÕES*/
+/*Botão voltar*/
    .voltar{
-    margin-right: 850px;
-    background-color: #92a2e8;
-    display: inline-block;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-top: 25px;
-    padding-right: 15px;
-    padding-left: 15px;
-    position: static;
-    text-align: justify;
-    border-radius: 50px;
-    text-transform: uppercase;
-    font-size: 15px;
-    font-weight: bold;
-    box-shadow: 10px 5px 5px #1C2029;
+        margin-right: 850px;
+        background-color: #92a2e8;
+        display: inline-block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 25px;
+        padding-right: 15px;
+        padding-left: 15px;
+        position: static;
+        text-align: justify;
+        border-radius: 50px;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: bold;
+        box-shadow: 10px 5px 5px #1C2029;
    }
    
         .voltar a{
-        color: #ffff;
-        text-decoration: none;
-        transition: 0.3s;
+            color: #ffff;
+            text-decoration: none;
+            transition: 0.3s;
         }
 
         .voltar a:hover{
-        color: #303650;
-        }
+            color: #303650;
+}
 
    
 /*Página de instruções*/
@@ -169,9 +176,8 @@
 
     .inst img{
         margin: 25px;
-    }
-
-    /*Página de questões*/
+}
+ /*PÁGINA DAS QUESTÕES*/
     .icones{
         color: #ffffff;
         margin-top: 25px;
@@ -183,14 +189,14 @@
         color: #f5f5f5;
         width: 1000px;
         height: 150px;
-        display: flex;
         margin-top: 25px;
-        margin-bottom: 25px;
-        padding-left: 350px;
-        text-align: center;
-        align-items: center;
+        margin-bottom: 25px;  
         border-radius: 50px;
         font-size: 35px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 
     .perg{
@@ -198,106 +204,140 @@
         text-align: center;
     }
 
+
     .alternativa{
         color: #f5f5f5;
         background-color: #92a2e8;
         border-radius: 50px;
-        width: 285px;
+        width: 950px;
         height: 50px;
-        margin: 20px;
-        padding-top: 15px;
-        padding-left: 100px;
-        font-weight: bold; 
-        font-size: larger;   
+        margin: 25px;
+        font-weight: bold;
+        font-size: larger;  
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 
-   /*Footer*/
-* {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   letter-spacing: 1px;
+    .inter{
+        color: #f5f5f5;
+        margin-left: 15px;
 }
 
-footer{
-    width: 100%;
-    color: #f5f5f5;
+
+.custom-radio input{
+  display: none;
 }
 
-.footer-link{
-  text-decoration: none;  
+
+.custom-radio input + label:before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgba(156, 156, 190, 0.32);
+  border: 1px solid gray;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  margin-bottom: 3px;
 }
 
-#footer_content{
-    background-color: #1C2029;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    padding: 3rem 3.5rem;
-    opacity: 0.9;
+.custom-radio input:checked + label:before {
+  background-color: white;
+  box-sizing: border-box;
+  border: 5px solid red;
+  padding: 4px;
 }
 
-#footer_contacts h1{
-    margin-bottom: 0.75rem;
-}
+/*Footer*/
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    }
 
-#footer_social_media{
-    display: flex;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
+    footer{
+        width: 100%;
+        color: #f5f5f5;
+    }
 
-#footer_social_media .footer-link{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 2.5rem;
-    width: 2.5rem;
-    color: #f5f5f5;
-    border-radius: 50%;
-    transition: all 0.4s;
-}
+    .footer-link{
+        text-decoration: none;  
+    }
 
-#footer_social_media .footer-link i{
-    font-size: 1.5rem;
-}
+    #footer_content{
+        background-color: #1C2029;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        padding: 3rem 3.5rem;
+        opacity: 0.9;
+    }
 
-#footer_social_media .footer-link:hover{
-    opacity: 0.3;
-}
+    #footer_contacts h1{
+        margin-bottom: 0.75rem;
+    }
 
-#instagram{
-    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
-}
+    #footer_social_media{
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
 
-#twitter{
-    background-color: #00abf0 ;
-}
+    #footer_social_media .footer-link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2.5rem;
+        width: 2.5rem;
+        color: #f5f5f5;
+        border-radius: 50%;
+        transition: all 0.4s;
+    }
 
-#youtube{
-    background-color: #ff0000 ;
-}
+    #footer_social_media .footer-link i{
+        font-size: 1.5rem;
+    }
 
-.footer-list{
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    list-style: none;
-}
+    #footer_social_media .footer-link:hover{
+        opacity: 0.3;
+    }
 
-.footer-list .footer-link{
-    color: #9395a8;
-    transition: all 0.4s;
-}
+    #instagram{
+        background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+    }
 
-.footer-list .footer-link:hover{
-    color: #92a2e8;
-}
+    #twitter{
+        background-color: #00abf0 ;
+    }
 
-.footer-list p{
-    color: #9395a8;
-    transition: all 0.4s;
-}
+    #youtube{
+        background-color: #ff0000 ;
+    }
 
-.footer-list p:hover{
-    color: #92a2e8;
+    .footer-list{
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        list-style: none;
+    }
+
+    .footer-list .footer-link{
+        color: #9395a8;
+        transition: all 0.4s;
+    }
+
+    .footer-list .footer-link:hover{
+        color: #92a2e8;
+    }
+
+    .footer-list p{
+        color: #9395a8;
+        transition: all 0.4s;
+    }
+
+    .footer-list p:hover{
+        color: #92a2e8;
 }

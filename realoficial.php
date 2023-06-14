@@ -21,10 +21,10 @@ session_start();
  
 
     //Array contendo as perguntas
-    $perguntas = array ("Qual a idade dela?", "Quando ela nasceu?", "Qual o apelido que os fãs brasileiros deram à Taylor Swift?",
-    "Quantos álbuns de estúdio da Taylor foram lançados até agora?", "Qual é o nome do primeiro álbum da cantora?
-    ", "Qual foi o último relacionamento da Taylor?", "Qual foi o álbum mais vendido da Taylor?",
-    "Qual é o nome da tour atual que a Taylor está fazendo?", "Qual seu número da sorte?
+    $perguntas = array ("Qual a idade dela?", "Quando ela nasceu?", "Qual apelido os fãs brasileiros deram à cantora?",
+    "Quantos álbuns de estúdio da Taylor foram lançados?", "Qual é o nome do primeiro álbum da cantora?
+    ", "Com quem foi seu último relacionamento?", "Qual foi o álbum mais vendido da artista?",
+    "Qual é o nome da tour atual que ela está fazendo?", "Qual o número da sorte da Taylor?
     ", "Quantos grammys ela ganhou?"
     );
     //Array das respostas
@@ -75,12 +75,12 @@ function exibirQuestao($i){
 ?>
     <form action="realoficial.php" method="post"><br>
     <?php echo $msg?><br>
-    <h2><i class="fa-solid fa-trophy"></i><label>Pontos: <input type="text" name="ponto" value="<?php echo $ponto; ?>"</h2></label>
-    <h1 class="perg" >Pergunta <?php echo $i+1?></h1>
+    <h2><i class="fa-solid fa-trophy"></i><label>Pontos: <input type="text" name="ponto" value="<?php echo $ponto; ?>" readonly></h2></label>
+    <h1 class="perg" >Pergunta <?php echo $i+1?><i class="fa-solid fa-circle-question fa-bounce inter"></i> </h1>
     <h2 class="pergunta"><?php echo $perguntas[$i]?></h2>
     <div class="alternativa">
         <input type="radio" name="res" value="1"><?php echo($respostas[$i][0])?></br>
-    </div>
+    </div> 
     <div class="alternativa">
         <input type="radio" name="res" value="2"><?php echo($respostas[$i][1])?></br>
     </div>
@@ -92,6 +92,16 @@ function exibirQuestao($i){
     </div>
     
     <button name="responder" value="responder">Responder</button>
+ 
+    <div class="custom-radio">
+      <input id="radio-1" name="question" value="1" type="radio">
+      <label for="radio-1">Sim</label>
+    </div>
+    
+    <div class="custom-radio">
+      <input id="radio-2" name="question" value="0" type="radio">
+      <label for="radio-2">Não</label>
+    </div>
     
 </form>
 <?php
@@ -181,7 +191,7 @@ function exibirQuestao($i){
  
       <ul class="footer-list">
           <li>
-              <h3>Créditos</h3>
+              <h3>Ficha técnica</h3>
           </li>
           <li>
               <p>Trabalho realizado para a disciplina de programação para internet</p>
