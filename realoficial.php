@@ -24,7 +24,7 @@ session_start();
     $perguntas = array ("Qual a idade dela?", "Quando ela nasceu?", "Qual o apelido que os fãs brasileiros deram à Taylor Swift?",
     "Quantos álbuns de estúdio da Taylor foram lançados até agora?", "Qual é o nome do primeiro álbum da cantora?
     ", "Qual foi o último relacionamento da Taylor?", "Qual foi o álbum mais vendido da Taylor?",
-    "Qual é o nome da tour atual (maio/2023) que a Taylor está fazendo?", "Qual é o número da sorte da Srta. Swift?
+    "Qual é o nome da tour atual que a Taylor está fazendo?", "Qual seu número da sorte?
     ", "Quantos grammys ela ganhou?"
     );
     //Array das respostas
@@ -73,18 +73,27 @@ session_start();
 function exibirQuestao($i){
         global $perguntas, $respostas, $ponto, $msg;
 ?>
-        <form action="realoficial.php" method="post"><br>
-        <?php echo $msg?><br>
-        <h2><i class="fa-solid fa-trophy"></i><label>Pontos: <input type="text" name="ponto" value="<?php echo $ponto; ?>"</h2></label>
-        <h1>Pergunta <?php echo $i+1?></h1>
-        <h2><?php echo $perguntas[$i]?></h2>
+    <form action="realoficial.php" method="post"><br>
+    <?php echo $msg?><br>
+    <h2><i class="fa-solid fa-trophy"></i><label>Pontos: <input type="text" name="ponto" value="<?php echo $ponto; ?>"</h2></label>
+    <h1 class="perg" >Pergunta <?php echo $i+1?></h1>
+    <h2 class="pergunta"><?php echo $perguntas[$i]?></h2>
+    <div class="alternativa">
         <input type="radio" name="res" value="1"><?php echo($respostas[$i][0])?></br>
+    </div>
+    <div class="alternativa">
         <input type="radio" name="res" value="2"><?php echo($respostas[$i][1])?></br>
+    </div>
+    <div class="alternativa">
         <input type="radio" name="res" value="3"><?php echo($respostas[$i][2])?></br>
+    </div>
+    <div class="alternativa">
         <input type="radio" name="res" value="4"><?php echo($respostas[$i][3])?></br>
-        <button name="responder" value="responder">Responder</button>
-        
-    </form>
+    </div>
+    
+    <button name="responder" value="responder">Responder</button>
+    
+</form>
 <?php
     }  
 
@@ -123,11 +132,9 @@ function exibirQuestao($i){
         <?php echo "Jogador: " . $_SESSION["nomeJogador"];?>
     </h2>
     </div>
-
         <div class="perguntas contpag">
         <?php exibirQuestao($valor);?><br>
         </div>
-
 
     <div class="contpag">
     <form action="realoficial.php" method="post">
@@ -162,13 +169,13 @@ function exibirQuestao($i){
               <h3>Desenvolvido por</h3>
           </li>
           <li>
-              <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZZzthsKLFKlgvhTndnzQSMvkLLKmRLBjLNCvmkxwfRDpZfVKjgVxcTXbMldWJQfwDwTgV" class="footer-link">Flávia Jamily</a>
+              <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsdDzZVhzWbvJxplVtLLlZbKRvnvrqcMjFqWKcDHLnBDLhHqhnmSnftJWZFMcQmXsHngwJLG" class="footer-link" target="blank">Flávia Jamily</a>
           </li>
           <li>
-              <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZZzthsKLFKlgvhTndnzQSMvkLLKmRLBjLNCvmkxwfRDpZfVKjgVxcTXbMldWJQfwDwTgV" class="footer-link">Isabel Natalia</a>
+              <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsdDzZVhzWbvJxplVtLLlZbKRvnvrqcMjFqWKcDHLnBDLhHqhnmSnftJWZFMcQmXsHngwJLG" class="footer-link" target="blank">Isabel Natalia</a>
           </li>
           <li>
-              <a href="https://mail.google.com/mail/u/1/#inbox?compose=CllgCJTHVrhzfknrDbfrVrskLQpkcLlWmSgnWJpjCQtPwkDCDGBXXwCgFjxwtRgKtBWxnjNFsGq" class="footer-link">Sarah Lima</a>
+              <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsdDzZVhzWbvJxplVtLLlZbKRvnvrqcMjFqWKcDHLnBDLhHqhnmSnftJWZFMcQmXsHngwJLG" class="footer-link" target="blank">Sarah Lima</a>
           </li>
       </ul>
  

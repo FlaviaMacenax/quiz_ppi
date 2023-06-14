@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$msg='';
+$msg="";
 $validacao="";
 $ponto=0;
 $valor = 0;
@@ -11,17 +11,20 @@ $botao = "";
 if(isset($_POST["valor"])){
     $valor = $_POST["valor"];
     }
-
     if(isset($_POST["ponto"])){
-
         }
 
 //Array contendo as perguntas
-    $perguntas = array ("Qual a idade dela?", "Quando ela nasceu?", "Qual o apelido que os fãs brasileiros deram à Taylor Swift?",
-    "Quantos álbuns de estúdio da Taylor foram lançados até agora?", "Qual é o nome do primeiro álbum da cantora?
-    ", "Qual foi o último relacionamento da Taylor?", "Qual foi o álbum mais vendido da Taylor?",
-    "Qual é o nome da tour atual (maio/2023) que a Taylor está fazendo?", "Qual é o número da sorte da Srta. Swift?
-    ", "Quantos grammys ela ganhou?"
+    $perguntas = array ("Qual a idade dela?", 
+    "Quando ela nasceu?", 
+    "Qual o apelido que os fãs brasileiros deram à Taylor Swift?",
+    "Quantos álbuns de estúdio da Taylor foram lançados até agora?", 
+    "Qual é o nome do primeiro álbum da cantora?", 
+    "Qual foi o último relacionamento da Taylor?", 
+    "Qual foi o álbum mais vendido da Taylor?",
+    "Qual é o nome da tour atual (maio/2023) que a Taylor está fazendo?",
+    "Qual é o número da sorte da Srta. Swift?", 
+    "Quantos grammys ela ganhou?"
     );
     //Array das respostas
     $respostas = array(
@@ -43,10 +46,10 @@ if(isset($_POST["valor"])){
                    global $ponto;
                     if($alternativa==$posicaoResposta){
                         $ponto = $_POST["ponto"]+100;
-                        return "Parabéns, você acertou a questão anterior e ganhou +100 pontos. <br>";
+                        return "Parabéns, você acertou a questão anterior e ganhou +100 pontos :). <br>";
                     }else{
                         $ponto= $_POST["ponto"];
-                        return "Que pena, você errou e não marcou pontos. <br>";}
+                        return "Que pena, você errou e não marcou pontos :(. <br>";}
                     }
 
 //Estrutura para mostrar se a questão marcada foi a correta ou errada, caso o usuário selecione o botão responder
@@ -66,7 +69,7 @@ function exibirQuestao($i){
 ?>
     <form action="teste.php" method="post">
         <?php echo $msg?>
-        <h2><i class="fa-solid fa-trophy"></i><label> Pontos: <input type="text" name="ponto" value="<?php echo $ponto; ?>"></h2></label>
+        <h2><i class="fa-solid fa-trophy"></i><label> Pontos: </label><input type="text" name="ponto" value="<?php echo $ponto; ?>" readonly></h2>
         <h1><?php echo ($perguntas[$i])?></h1>
         <label><input type="hidden" name="valor" value="<?php echo $valor; ?>"></label>
         <br>
@@ -176,7 +179,5 @@ function exibirQuestao($i){
       </ul>
     </div>
   </footer>
-
-
 </body>
 </html>

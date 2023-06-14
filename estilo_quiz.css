@@ -178,10 +178,38 @@
         margin-bottom: 25px;
     }
 
-    .perguntas{
-        color: #ffffff;
+    .pergunta{
+        background-color: #6173ce;
+        color: #f5f5f5;
+        width: 1000px;
+        height: 150px;
+        display: flex;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        padding-left: 350px;
+        text-align: center;
+        align-items: center;
+        border-radius: 50px;
+        font-size: 35px;
     }
-   
+
+    .perg{
+        color: #f5f5f5;
+        text-align: center;
+    }
+
+    .alternativa{
+        color: #f5f5f5;
+        background-color: #92a2e8;
+        border-radius: 50px;
+        width: 285px;
+        height: 50px;
+        margin: 20px;
+        padding-top: 15px;
+        padding-left: 100px;
+        font-weight: bold; 
+        font-size: larger;   
+    }
 
    /*Footer*/
 * {
