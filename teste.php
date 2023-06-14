@@ -82,6 +82,7 @@ function exibirQuestao($i){
     <form action="teste.php" method="post">
         <?php echo $msg?>
         <h2><i class="fa-solid fa-trophy"></i><label> Pontos: </label><input type="text" name="ponto" value="<?php echo $ponto; ?>" readonly></h2>
+        <h1>Pergunta <?php echo $i+1?></h1>
         <h1><?php echo ($perguntas[$i])?></h1>
         <label><input type="hidden" name="valor" value="<?php echo $valor; ?>"></label>
         <input type="hidden" name="acertos" value="<?php echo $acertos; ?>">
