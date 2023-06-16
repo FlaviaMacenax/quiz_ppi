@@ -30,17 +30,18 @@ if(isset($_POST["valor"])){
 
 //Array contendo as perguntas
     $perguntas = array ("Qual a idade dela?", 
-    "Quando ela nasceu?", 
-    "Qual o apelido que os fãs brasileiros deram à cantora?",
-    "Quantos álbuns de estúdio da Taylor foram lançados?", 
-    "Qual é o nome do primeiro álbum da artista?", 
-    "Com que foi seu último relacionamento?", 
-    "Qual foi o álbum mais vendido da cantora?",
-    "Qual é o nome da tour atual da Taylor?",
-    "Qual seu número da sorte?", 
-    "Quantos grammys ela ganhou?"
+        "Quando ela nasceu?", 
+        "Qual o apelido que os fãs brasileiros deram à cantora?",
+        "Quantos álbuns de estúdio da Taylor foram lançados?", 
+        "Qual é o nome do primeiro álbum da artista?", 
+        "Com que foi seu último relacionamento?", 
+        "Qual foi o álbum mais vendido da cantora?",
+        "Qual é o nome da tour atual da Taylor?",
+        "Qual seu número da sorte?", 
+        "Quantos grammys ela ganhou?"
     );
-    //Array das respostas
+
+//Array das alternativas
     $respostas = array(
         array ("27 anos", "30 anos", "33 anos", "36 anos"),
         array ("13 de dezembro de 1989", "27 de março de 1986", "23 de outubro de 1989", "17 de fevereiro de 1986"),
@@ -54,28 +55,29 @@ if(isset($_POST["valor"])){
         array ("7", "8", "11", "12")
     );
 
+//Array das respostas corretas
     $posicao = array(3, 1, 1, 2, 1, 2, 4, 3, 3, 4);
 
-    function validarResposta($alternativa, $posicaoResposta, $i){
-        global $ponto, $acertos;
-        if($alternativa==$posicaoResposta){
-            $ponto = $_POST["ponto"]+100;
-            $acertos = $_POST["acertos"]+1;
-            return "Parabéns, você acertou a questão e ganhou +100 pontos 🥳 <br>";
-        }else{
-            $ponto= $_POST["ponto"];
-            return "Que pena, você errou e não marcou pontos ☹️<br>";}
-        }
+        function validarResposta($alternativa, $posicaoResposta, $i){
+            global $ponto, $acertos;
+                if($alternativa==$posicaoResposta){
+                    $ponto = $_POST["ponto"]+100;
+                    $acertos = $_POST["acertos"]+1;
+                        return "Parabéns, você acertou a questão e ganhou +100 pontos 🥳 <br>";
+                 }else{
+                     $ponto= $_POST["ponto"];
+                        return "Que pena, você errou e não marcou pontos ☹️<br>";}
+            }
 
-if(isset($_POST["proxima"])){
-    $valor = $_POST["valor"]+1;
+    if(isset($_POST["proxima"])){
+        $valor = $_POST["valor"]+1;
 }
 
 //Estrutura para mostrar se a questão marcada foi a correta ou errada, caso o usuário selecione o botão responder
-if(isset($_POST["responder"])){
-    $botao = $_POST["responder"];
+    if(isset($_POST["responder"])){
+        $botao = $_POST["responder"];
 
-    //Chamando a função de validação da resposta
+//Chamando a função de validação da resposta
     if(isset($_POST["res"])){
         $validacao= validarResposta($_POST["res"], $posicao[$valor], $_POST["ponto"]);
         //$valor = $_POST["valor"]+1;
@@ -86,9 +88,9 @@ if(isset($_POST["responder"])){
 
 }
 
-       //Função para exibir as perguntas
-function exibirQuestao($i){
-    global $perguntas, $respostas, $valor, $ponto, $msg, $acertos, $foirespondido;
+//Função para exibir as perguntas
+    function exibirQuestao($i){
+        global $perguntas, $respostas, $valor, $ponto, $msg, $acertos, $foirespondido;
 ?>
     <form action="teste.php" method="post">
         <?php echo "<div class=\"valid\">", $msg ,"</div>"; ?><br>
@@ -121,11 +123,12 @@ function exibirQuestao($i){
         <?php } ?> </div>
     </form>
 
-<?php
-if($valor==9){
-    echo '<a href="final.php"><button>Resultado do Quiz</button></a>';
-}
-}
+
+<?php  
+    if($valor==9){
+        echo  "<div class=\"botoes\"><a href='final.php'><button>Resultados</button></a></div>"; 
+    }  
+ }
 ?>
 
 <!DOCTYPE html>

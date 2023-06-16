@@ -272,6 +272,25 @@
                 border-color: #374792;
             }
 
+            .botoes button{
+                width: 125px;
+                background-color: #374792;
+                font-size: 15px;
+                border-radius: 10px;
+                font-family: 'Playfair Display', serif;
+                border-color: #6173ce;
+                color: #f5f5f5;
+                transition: all 0.4s ease;
+                box-shadow: 10px 7px 7px #1C2029;
+                margin: 10px;
+            }
+
+            .botoes button:hover {
+                background-color: #ffff; 
+                color: #374792;
+                border-color: #374792;
+            }
+
     .custom-radio input{
         display: none;
     }
