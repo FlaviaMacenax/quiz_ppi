@@ -182,6 +182,7 @@
     .inst img{
         margin: 25px;
 }
+
  /*PÁGINA DAS QUESTÕES*/
     .icones{
         color: #ffffff;
@@ -252,7 +253,7 @@
         padding-left: 25px;
     }
 
-    input[type="submit"]{
+        .botoes input[type="submit"]{
             width: 125px;
             background-color: #374792;
             font-size: 15px;
@@ -262,15 +263,15 @@
             color: #f5f5f5;
             transition: all 0.4s ease;
             box-shadow: 10px 7px 7px #1C2029;
+            margin: 10px;
         }
         
-        input[type="submit"]:hover {
-            background-color: #ffff; 
-            color: #374792;
-            border-color: #374792;
-        }
+            input[type="submit"]:hover {
+                background-color: #ffff; 
+                color: #374792;
+                border-color: #374792;
+            }
 
-    
     .custom-radio input{
         display: none;
     }
@@ -299,7 +300,39 @@
         color: #f5f5f5;
 }
 
+/*PÁGINA FINAL*/
+/*Botão reiniciar jogo*/
+.reiniciar{
+    background-color: #374792;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 25px;
+    padding-right: 15px;
+    padding-left: 15px;
+    position: static;
+    text-align: justify;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 10px 5px 5px #1C2029;
+    transition: all 0.4s ease;
+}
 
+    .reiniciar a{
+        color: #ffff;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .reiniciar a:hover{
+        color: #303650;
+
+}
+
+
+    
 
 
 /*Footer*/

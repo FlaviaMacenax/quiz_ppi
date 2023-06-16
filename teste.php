@@ -110,12 +110,15 @@ function exibirQuestao($i){
         <div class="alternativa custom-radio ">
         <input type="radio" id="radio-4" name="res" value="4"><label for="radio-4"><?php echo($respostas[$i][3])?></label></br>
         </div>
+
+     <div class="botoes">
         <?php if(!$foirespondido){ ?>
             <input id="responder" type="submit" name= "responder" value="Responder">
-        <?php } ?>
+        <?php } ?></div>
+            <div class="botoes">
         <?php if($foirespondido){ ?>
             <input id="proxima" type="submit" name= "proxima" value="Próxima">
-        <?php } ?>
+        <?php } ?> </div>
     </form>
 
 <?php
