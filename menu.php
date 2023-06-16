@@ -3,9 +3,10 @@ session_start();
 
 $nomeJogador = "";
 $msg = "";
+$nome = false;
 
 if(isset($_POST["enviar"])){
-  $botao = $_POST["enviar"];
+  $nome=true;
   
   //Nome do jogador
 if(isset($_POST["nomeJogador"])){
@@ -49,19 +50,29 @@ if(isset($_POST["nomeJogador"])){
         <img src="imagens/taylormid.png" width="900" height="auto" alt="foto da Taylor Swift">
   
     <!--Opções do menu-->
-    <form action="teste.php" method="post">
+    <form action="menu.php" method="post">
     <section class="opcoes contpag">
     <div class="itens campo">  <!--Onde o jogador deve colocar seu nome-->  
-        <input type="text" id="nome" placeholder="QUAL SEU NOME?" name="nomeJogador" required>
+    <?php if(!$nome) { ?>
+        <input type="text" id="nome" placeholder="QUAL SEU NOME?" name="nomeJogador" >
+        <button name="enviar">Enviar nome</button>
+        <?php } ?>
+    
+    <?php if($nome){?>
+        <a href="teste.php">Iniciar jogo</a> <?php }?>
     </div>
     <div class="itens">
-            <a href="teste.php"><button name="enviar">Iniciar jogo</button></a> <!--Direciona o jogador para as perguntas-->
+             <!--Direciona o jogador para as perguntas-->
     </div>
     <div class="itens">
     <a href="instruções.php">Instruções</a> <!--Direciona o jogador para as instruções--> 
     </div>
     </section>
-</section></form>
+    </section>
+
+   
+
+    </form>
 
    <!--Rodapé (deve mostrar a equipe de devs)-->
    <footer>

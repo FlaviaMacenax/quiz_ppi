@@ -71,6 +71,7 @@ if(isset($_POST["valor"])){
 
     if(isset($_POST["proxima"])){
         $valor = $_POST["valor"]+1;
+        $ponto = $_POST["ponto"];
 }
 
 //Estrutura para mostrar se a questão marcada foi a correta ou errada, caso o usuário selecione o botão responder
@@ -82,9 +83,7 @@ if(isset($_POST["valor"])){
         $validacao= validarResposta($_POST["res"], $posicao[$valor], $_POST["ponto"]);
         //$valor = $_POST["valor"]+1;
         $foirespondido = true;
-    }
-    
-    $msg= " ".$validacao;
+    }$msg= " ".$validacao;
 
 }
 
@@ -115,11 +114,11 @@ if(isset($_POST["valor"])){
 
      <div class="botoes">
         <?php if(!$foirespondido){ ?>
-            <input id="responder" type="submit" name= "responder" value="Responder">
+            <input id="responder" type="submit" name= "responder" value="Responder">;
         <?php } ?></div>
             <div class="botoes">
         <?php if($foirespondido){ ?>
-            <input id="proxima" type="submit" name= "proxima" value="Próxima">
+            <input id="proxima" type="submit" name= "proxima" value="Próxima">;
         <?php } ?> </div>
     </form>
 
