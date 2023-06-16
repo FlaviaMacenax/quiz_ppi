@@ -46,7 +46,7 @@ if(isset($_POST["nomeJogador"])){
 
     <!--Menu-->
   <section class="secao-1 container">
-        <img src="imagens/taylormid.png" width="900" height="auto" alt="ícone de Taylor Swift">
+        <img src="imagens/taylormid.png" width="900" height="auto" alt="foto da Taylor Swift">
   
     <!--Opções do menu-->
     <form action="teste.php" method="post">
@@ -58,7 +58,7 @@ if(isset($_POST["nomeJogador"])){
             <a href="teste.php"><button name="enviar">Iniciar jogo</button></a> <!--Direciona o jogador para as perguntas-->
     </div>
     <div class="itens">
-    <a href="instruções.php">Instruções</a> <!--Direciona o jogados para as instruções--> 
+    <a href="instruções.php">Instruções</a> <!--Direciona o jogador para as instruções--> 
     </div>
     </section>
 </section></form>
