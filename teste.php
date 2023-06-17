@@ -19,10 +19,12 @@ if(isset($_POST["valor"])){
         }
         if(isset($_POST["acertos"])){
         }
+        //Armazenando os pontos para página final
         if(isset($_POST["ponto"])){
             $ponto = $_POST["ponto"];
             $_SESSION ["ponto"] = $ponto;
           }
+          //Armazenando os acertos para página final
           if(isset($_POST["acertos"])){
             $acertos = $_POST["acertos"];
             $_SESSION ["acertos"] = $acertos;
@@ -69,7 +71,10 @@ if(isset($_POST["valor"])){
                         return "Que pena, você errou e não marcou pontos ☹️<br>";}
             }
 
-
+    if(isset($_POST["proxima"])){
+        $valor = $_POST["valor"]+1;
+        $ponto = $_POST["ponto"];
+    }
 //Estrutura para mostrar se a questão marcada foi a correta ou errada, caso o usuário selecione o botão responder
     if(isset($_POST["responder"])){
         $botao = $_POST["responder"];
@@ -80,11 +85,6 @@ if(isset($_POST["valor"])){
         $foirespondido = true;
     }$msg= " ".$validacao;
 
-}
-
-if(isset($_POST["proxima"])){
-    $valor = $_POST["valor"]+1;
-    $ponto = $_POST["ponto"];
 }
 
 //Função para exibir as perguntas
