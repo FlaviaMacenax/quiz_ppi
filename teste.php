@@ -160,8 +160,10 @@ $foirespondido=false;
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="estilo_quiz.css" />
     <title>Taylor Swift Quiz</title>
+    <script src="script.js" defer></script>
 </head>
 <body>
+    
 <!--Página de perguntas do quiz. É aqui que as perguntas e as alternativas serão exibidas-->
     <!--Cabeçalho-->
     <header class="container">
