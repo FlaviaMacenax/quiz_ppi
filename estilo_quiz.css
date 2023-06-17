@@ -1,47 +1,48 @@
-/*Configurações comuns a todo o corpo do quiz*/
-    body{
-        margin: 0;
-        padding: 0;
-        background-image: url(imagens/fundo.png);
-        font-family: 'Playfair Display', serif;
-}
- 
-/*Personalização da barra*/
-    ::-webkit-scrollbar{
-        width: 15px;
-        background-color: #1C2029;
+    /*Configurações comuns a todo o corpo do quiz*/
+        body{
+            margin: 0;
+            padding: 0;
+            background-image: url(imagens/fundo.png);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .container{
+            max-width: 830px;
+            margin: auto;
     }
+ 
+    /*Personalização da barra*/
+        ::-webkit-scrollbar{
+            width: 15px;
+            background-color: #1C2029;
+        }
 
         ::-webkit-scrollbar-thumb{
             width: 15px;
             background-color: #92a2e8;
-        }
+    }
 
-    .container{
-        max-width: 830px;
-        margin: auto;
-}
+    
+    /*Cabeçalho*/
+        header .logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 35px;
+    }
 
- /*Cabeçalho*/
-    header .logo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 35px;
-}
+    /*Geral*/
+        .contpag{
+            max-width: 1000px;
+            margin: auto;
+    }
 
-/*Geral*/
-   .contpag{
-        max-width: 1000px;
-        margin: auto;
-}
-
- /*PÁGINA INICIAL*/
- /*Parte principal do menu*/
-    .secao-1{
-        display: flex;
-        margin-top: 50px;
-   }
+/*PÁGINA INICIAL*/
+        /*Parte principal do menu*/
+            .secao-1{
+                display: flex;
+                margin-top: 50px;
+            }
 
         .secao-1 img{
          margin-left: -350px;
@@ -53,7 +54,7 @@
             justify-content: center;
             margin-bottom: 50px;
             margin-top: 75px;
-}
+        }
  
   /*Opções do menu*/
   .opcoes{
