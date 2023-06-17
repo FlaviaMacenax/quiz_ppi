@@ -9,11 +9,11 @@ $porcentagem_acertos = ((($_SESSION["acertos"])*100))/10;
 // Mensagens para acertos:
 
 if ($_SESSION["acertos"] == 0) {
-    $txtActs = "Que pena! Você não acertou nenhuma das questões, 0% do quiz, ";
+    $txtActs = "Que pena! Você não acertou nenhuma das questões, ". $porcentagem_acertos . "% do quiz, ";
 }
 
 if ($_SESSION["acertos"] == 1) {
-    $txtActs = "Que pena! Você acertou apenas 1 questão de 10, 10% do quiz ";
+    $txtActs = "Que pena! Você acertou apenas 1 questão de 10," . $porcentagem_acertos . "% do quiz, ";
 }
 
 if ($_SESSION["acertos"] >= 2 && $_SESSION["acertos"] <= 4) {
@@ -56,6 +56,7 @@ if ($_SESSION["ponto"] == 500 || $_SESSION["ponto"] == 600) {
 
 if ($_SESSION["ponto"] == 700 || $_SESSION["ponto"] == 800) {
     $txtPts = "e acumulou " . $_SESSION["ponto"] . "pontos. Você é uma Swifter Real Oficial! Já está no fandom há um bom tempo e sabe muito.";
+    echo '<img src= https://www.icegif.com/wp-content/uploads/2023/04/icegif-163.gif';
 }
 
 if ($_SESSION["ponto"] == 900 || $_SESSION["ponto"] == 1000) {
