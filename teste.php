@@ -90,6 +90,10 @@ if(isset($_POST["valor"])){
 //Função para exibir as perguntas
     function exibirQuestao($i){
         global $perguntas, $respostas, $valor, $ponto, $msg, $acertos, $foirespondido;
+        if($i>9){
+            $i=9;
+            $valor=9;
+           }
 ?>
     <form action="teste.php" method="post">
 
