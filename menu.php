@@ -55,14 +55,10 @@ if(isset($_POST["nomeJogador"])){
     <div class="itens campo">  <!--Onde o jogador deve colocar seu nome-->  
     <?php if(!$nome) { ?>
         <input type="text" id="nome" placeholder="QUAL SEU NOME?" name="nomeJogador" >
-        <button name="enviar">Enviar nome</button>
-        <?php } ?>
+        <button name="enviar">Enviar nome</button>  <?php } ?>
     
     <?php if($nome){?>
         <a href="teste.php">Iniciar jogo</a> <?php }?>
-    </div>
-    <div class="itens">
-             <!--Direciona o jogador para as perguntas-->
     </div>
     <div class="itens">
     <a href="instruções.php">Instruções</a> <!--Direciona o jogador para as instruções--> 

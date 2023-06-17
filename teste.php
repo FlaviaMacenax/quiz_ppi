@@ -81,7 +81,6 @@ if(isset($_POST["valor"])){
 //Chamando a função de validação da resposta
     if(isset($_POST["res"])){
         $validacao= validarResposta($_POST["res"], $posicao[$valor], $_POST["ponto"]);
-        //$valor = $_POST["valor"]+1;
         $foirespondido = true;
     }$msg= " ".$validacao;
 
@@ -114,19 +113,20 @@ if(isset($_POST["valor"])){
 
      <div class="botoes">
         <?php if(!$foirespondido){ ?>
-            <input id="responder" type="submit" name= "responder" value="Responder">;
-        <?php } ?></div>
-            <div class="botoes">
+            <input id="responder" type="submit" name= "responder" value="Responder">
+        <?php } ?>
         <?php if($foirespondido){ ?>
-            <input id="proxima" type="submit" name= "proxima" value="Próxima">;
-        <?php } ?> </div>
+            <input id="proxima" type="submit" name="proxima" value="Próxima">
+        <?php } ?>
+    
+    </div>
     </form>
 
 
 <?php  
-    if($valor==9){
-        echo  "<div class=\"botoes\"><a href='final.php'><button>Resultados</button></a></div>"; 
-    }  
+    if($valor==9){?>
+        <div class=\"botoes\"><a href='final.php'><button>Resultados</button></a></div>
+        <?php }  
  }
 ?>
 
