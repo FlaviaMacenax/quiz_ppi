@@ -65,10 +65,10 @@ if(isset($_POST["valor"])){
                 if($alternativa==$posicaoResposta){
                     $ponto = $_POST["ponto"]+100;
                     $acertos = $_POST["acertos"]+1;
-                        return "Parabéns, você acertou a questão e ganhou +100 pontos 🥳 <br>";
+                        return "Parabéns, você acertou a questão e ganhou +100 pontos 🥳 <br>". '<img src="https://media4.giphy.com/media/xT0Cyhi8GCSU91PvtC/giphy.gif?cid=6c09b952ram70wcw7bxvcekqje5hytxmpt2picgwugyeldod&ep=v1_gifs_search&rid=giphy.gif&ct=g">';
                  }else{
                      $ponto= $_POST["ponto"];
-                        return "Que pena, você errou e não marcou pontos ☹️<br>";}
+                        return "Que pena, você errou e não marcou pontos ☹️<br>". '<img src="https://i.pinimg.com/originals/a0/38/ab/a038ab5d7cd581a92947d7aee5821090.gif">';}
             }
 
     if(isset($_POST["proxima"])){
@@ -92,8 +92,17 @@ if(isset($_POST["valor"])){
         global $perguntas, $respostas, $valor, $ponto, $msg, $acertos, $foirespondido;
 ?>
     <form action="teste.php" method="post">
-        <?php echo "<div class=\"valid\">", $msg ,"</div>"; ?><br>
+
+        <div class="icones contpag">
+        <h2><i class="fa-solid fa-user"></i>
+        <!--Exibe o nome do jogador-->
+        <?php echo "Jogador: " . $_SESSION["nomeJogador"];?></h2><br>
+        <!--Exibe os pontos-->
         <h2 class="pontos" ><i class="fa-solid fa-trophy"></i><label> Pontos: </label><input type="text" name="ponto" value="<?php echo $ponto; ?>" readonly></h2>
+        </div>
+
+        <?php echo "<div class=\"valid\">", $msg ,"</div>"; ?><br>
+
         <h1 class="perg" >Pergunta <?php echo $i+1?><i class="fa-solid fa-circle-question fa-bounce inter"></i></h1>
         <h1 class="pergunta"><?php echo ($perguntas[$i])?></h1>
         <label><input type="hidden" name="valor" value="<?php echo $valor; ?>"></label>
@@ -157,17 +166,10 @@ if(isset($_POST["valor"])){
         <img src="imagens/logo.png" width="250" height="auto" alt="logo do quiz">
       </div>
     </header>
-     <!--Exibe o nome do jogador-->
-    <div class="icones contpag">
-        <h2><i class="fa-solid fa-user"></i>
-        <?php echo "Jogador: " . $_SESSION["nomeJogador"];?>
-    </h2>
-    </div>
 
         <div class="perguntas contpag">
         <?php exibirQuestao($valor);?><br>
         </div>
-
 
     <!--Rodapé (deve mostrar a equipe de devs)-->
  <footer>
