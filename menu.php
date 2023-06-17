@@ -24,7 +24,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Importação da fonte-->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
-    <!--Importação dos ícones do rodapé-->
+    <!--Importação dos ícones-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -44,7 +44,7 @@
         <!--Cabeçalho-->
         <header class="container">
             <div class="logo">
-                <img src="imagens/logo.png" width="250" height="auto" alt="logo do quiz">
+                <img src="imagens/logo.png" width="275" height="auto" alt="logo do quiz">
             </div> 
         </header>
 
@@ -59,7 +59,7 @@
                         <div class="itens campo">  
                             <?php if(!$nome) { ?>
                                 <input type="text" id="nome" placeholder="QUAL SEU NOME?" name="nomeJogador" required>
-                                <button name="enviar">Enviar nome</button>  <?php } ?>
+                                <button name="enviar">Enviar</button>  <?php } ?>
     
                             <?php if($nome){?>
                                 <a href="teste.php">Iniciar jogo</a> <?php }?>
