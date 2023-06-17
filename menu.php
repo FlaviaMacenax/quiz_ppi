@@ -54,7 +54,7 @@ if(isset($_POST["nomeJogador"])){
     <section class="opcoes contpag">
     <div class="itens campo">  <!--Onde o jogador deve colocar seu nome-->  
     <?php if(!$nome) { ?>
-        <input type="text" id="nome" placeholder="QUAL SEU NOME?" name="nomeJogador" >
+        <input type="text" id="nome" placeholder="QUAL SEU NOME?" name="nomeJogador" required>
         <button name="enviar">Enviar nome</button>  <?php } ?>
     
     <?php if($nome){?>
