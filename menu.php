@@ -38,6 +38,8 @@ if(isset($_POST["nomeJogador"])){
     <!--Página de primeiro contato com o quiz. Ela deve pegar o nome do jogador, exibir instruções e direciona-lo para a página 
     das perguntas-->
 
+<audio src="audio/shakeitoff.mp3" loop autoplay></audio>
+
     <!--Cabeçalho-->
     <header class="container">
       <div class="logo">

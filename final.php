@@ -67,7 +67,9 @@ if ($_SESSION["ponto"] >= 800 && $_SESSION["ponto"] <= 1000) {
     <title>Fim do Quiz!</title>
 </head>
 <body>
-   
+
+<audio src="audio/palmas.mp3" autoplay></audio>
+<audio src="audio/TheGreatWar.mp3" autoplay loop></audio>
  <!--Páginafinal. Exibe o número de pontos e de acertos do jogador-->
     <!-- Cabeçalho -->
     <header class="container">
