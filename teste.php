@@ -125,7 +125,7 @@ if(isset($_POST["valor"])){
 
 
 <?php  
-    if($valor==9){?>
+    if($valor==9){ ?>
         <div class=\"botoes\"><a href='final.php'><button>Resultados</button></a></div>
         <?php }  
  }
