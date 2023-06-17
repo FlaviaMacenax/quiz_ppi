@@ -47,8 +47,8 @@
             </div>
         </section>
 
-       <!--Rodapé (deve mostrar a equipe de devs)-->
-       <footer>
+        <!--Rodapé (deve mostrar a equipe de devs)-->
+        <footer>
             <div id="footer_content">
                 <div id="footer_contacts">
                     <h1><img src="imagens/logo.png"  width="150" height="auto" alt="logo do quiz"></h1>
@@ -74,13 +74,12 @@
                         <h3>Desenvolvido por</h3>
                     </li>
                     <li>
-                        <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsdDzZVhzWbvJxplVtLLlZbKRvnvrqcMjFqWKcDHLnBDLhHqhnmSnftJWZFMcQmXsHngwJLG" class="footer-link" target="blank">Flávia Jamily</a>
+                        <a href="mailto:flavia.macena@escolar.ifrn.edu.br" class="footer-link" target="blank">Flávia Jamily</a>
                     </li>
                     <li>
-                        <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsdDzZVhzWbvJxplVtLLlZbKRvnvrqcMjFqWKcDHLnBDLhHqhnmSnftJWZFMcQmXsHngwJLG" class="footer-link" target="blank">Isabel Natalia</a>
-                    </li>
+                        <a href="mailto:isabel.natalia@escolar.ifrn.edu.br" class="footer-link" target="blank">Isabel Natalia</a>
                     <li>
-                        <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsdDzZVhzWbvJxplVtLLlZbKRvnvrqcMjFqWKcDHLnBDLhHqhnmSnftJWZFMcQmXsHngwJLG" class="footer-link" target="blank">Sarah Lima</a>
+                        <a href="mailto:lima.sarah@escolar.ifrn.edu.br" class="footer-link" target="blank">Sarah Lima</a>
                     </li>
                 </ul>
  
@@ -103,6 +102,7 @@
                 </ul>
             </div>
         </footer>
+
 
 </body>
 </html>

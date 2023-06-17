@@ -46,14 +46,6 @@
         .secao-1 img{
          margin-left: -350px;
         }
-
-        .secao-2{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin-bottom: 50px;
-            margin-top: 75px;
-        }
  
     /*Opções do menu*/
         .opcoes{
@@ -203,7 +195,11 @@
         color: #ffffff;
         margin-top: 25px;
         margin-bottom: 25px;
-        margin-right: 10px;
+    }
+
+    .icon{
+        margin-right: 15px;
+        margin-top: 5px;
     }
 
     .pergunta{
@@ -211,8 +207,8 @@
         color: #f5f5f5;
         width: 1000px;
         height: 150px;
-        margin-top: 25px;
-        margin-bottom: 25px;  
+        margin-top: 40px;
+        margin-bottom: 60px;  
         border-radius: 50px;
         font-size: 30px;
         display: flex;
@@ -250,22 +246,41 @@
         margin-left: 15px;
     }
 
+    .jogador{
+        background-color: #374792;
+        color: #a3b1ef;
+        border-radius: 15px;
+        margin-left: 10px;
+        width: 150px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+
+    .user{
+        margin-left: 15px;
+    }
+
     .pontos{
         color: #f5f5f5;
+        margin-left: 410px;
     }
 
     .pontos input{
-        width: 100px;
+        width: 150px;
         height: 40px;
-        background-color: #37489299;
-        color: #92a2e8;
+        background-color: #374792;
+        margin-left: 10px;
+        color: #a3b1ef;
         font-family: 'Playfair Display', serif;
         font-size: 25px;
         border-radius: 15px;
         outline: none;
         border: 2px solid transparent;
         transition: all 0.4s ease; 
-        padding-left: 25px;
+        padding-left: 50px;
     }
         /*Botões*/
         .botoes input[type="submit"]{
@@ -332,7 +347,7 @@
 
     .valid{
         color: #f5f5f5;
-}
+    }
 
 /*PÁGINA FINAL*/
     /*Botão reiniciar jogo*/

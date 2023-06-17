@@ -71,63 +71,61 @@
                 </form>
             </section>
                 
-
-        <!--Rodapé (deve mostrar a equipe de devs)-->
-            <footer>
-                <div id="footer_content">
-                    <div id="footer_contacts">
-                        <h1><img src="imagens/logo.png"  width="150" height="auto" alt="logo do quiz"></h1>
-                        <p>Conheça mais sobre a Taylor:</p>
+        <!--Rodapé-->
+        <footer>
+            <div id="footer_content">
+                <div id="footer_contacts">
+                    <h1><img src="imagens/logo.png"  width="150" height="auto" alt="logo do quiz"></h1>
+                    <p>Conheça mais sobre a Taylor:</p>
  
-                        <div id= "footer_social_media">
-                            <a href="https://www.instagram.com/taylorswift/" class="footer-link" id="instagram">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
+                    <div id= "footer_social_media">
+                        <a href="https://www.instagram.com/taylorswift/" class="footer-link" id="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
  
-                            <a href="https://www.youtube.com/@TaylorSwift" class="footer-link" id="youtube">
-                                <i class="fa-brands fa-youtube"></i>
-                            </a>
+                        <a href="https://www.youtube.com/@TaylorSwift" class="footer-link" id="youtube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
  
-                            <a href="https://twitter.com/taylorswift13" class="footer-link" id="twitter">
-                                <i class="fa-brands fa-twitter"></i>
-                            </a>
-                        </div>
+                        <a href="https://twitter.com/taylorswift13" class="footer-link" id="twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
                     </div>
- 
-                    <ul class="footer-list">
-                        <li>
-                            <h3>Desenvolvido por</h3>
-                        </li>
-                        <li>
-                            <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsdDzZVhzWbvJxplVtLLlZbKRvnvrqcMjFqWKcDHLnBDLhHqhnmSnftJWZFMcQmXsHngwJLG" class="footer-link" target="blank">Flávia Jamily</a>
-                        </li>
-                        <li>
-                            <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsdDzZVhzWbvJxplVtLLlZbKRvnvrqcMjFqWKcDHLnBDLhHqhnmSnftJWZFMcQmXsHngwJLG" class="footer-link" target="blank">Isabel Natalia</a>
-                        </li>
-                        <li>
-                            <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsdDzZVhzWbvJxplVtLLlZbKRvnvrqcMjFqWKcDHLnBDLhHqhnmSnftJWZFMcQmXsHngwJLG" class="footer-link" target="blank">Sarah Lima</a>
-                        </li>
-                    </ul>
- 
-                    <ul class="footer-list">
-                        <li>
-                            <h3>Ficha técnica</h3>
-                        </li>
-                        <li>
-                            <p>Trabalho realizado para a disciplina de programação para internet</p>
-                        </li>
-                        <li>
-                            <p>Professor: Éberton Marinho</p>
-                        </li>
-                        <li>
-                            <p>Unidade 1</p>
-                        </li>
-                        <li>
-                            <p>IFRN- Campus Canguaretama</p>
-                        </li>
-                    </ul>
                 </div>
-            </footer>
+ 
+                <ul class="footer-list">
+                    <li>
+                        <h3>Desenvolvido por</h3>
+                    </li>
+                    <li>
+                        <a href="mailto:flavia.macena@escolar.ifrn.edu.br" class="footer-link" target="blank">Flávia Jamily</a>
+                    </li>
+                    <li>
+                        <a href="mailto:isabel.natalia@escolar.ifrn.edu.br" class="footer-link" target="blank">Isabel Natalia</a>
+                    <li>
+                        <a href="mailto:lima.sarah@escolar.ifrn.edu.br" class="footer-link" target="blank">Sarah Lima</a>
+                    </li>
+                </ul>
+ 
+                <ul class="footer-list">
+                    <li>
+                        <h3>Ficha técnica</h3>
+                    </li>
+                    <li>
+                        <p>Trabalho realizado para a disciplina de programação para internet</p>
+                    </li>
+                    <li>
+                        <p>Professor: Éberton Marinho</p>
+                    </li>
+                    <li>
+                        <p>Unidade 1</p>
+                    </li>
+                    <li>
+                        <p>IFRN- Campus Canguaretama</p>
+                    </li>
+                </ul>
+            </div>
+        </footer>
 
 </body>
 </html>
