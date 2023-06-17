@@ -4,46 +4,62 @@ session_start();
 
 $txtActs = "";
 $txtPts = "";
-$txtPctg= "";
 $porcentagem_acertos = ((($_SESSION["acertos"])*100))/10;
 
 // Mensagens para acertos:
 
 if ($_SESSION["acertos"] == 0) {
-    $txtActs = "Que pena! Você não acertou nenhuma das questões ";
+    $txtActs = "Que pena! Você não acertou nenhuma das questões, 0% do quiz, ";
 }
 
-if ($_SESSION["acertos"] >= 1 && $_SESSION["acertos"] <= 4) {
-    $txtActs = "Olha só! Você acertou " . $_SESSION["acertos"] . " questões de 10 ";
+if ($_SESSION["acertos"] == 1) {
+    $txtActs = "Que pena! Você acertou apenas 1 questão de 10, 10% do quiz ";
 }
 
-if ($_SESSION["acertos"] >= 5 && $_SESSION["acertos"] <= 7) {
-    $txtActs = "Uau! Você acertou " . $_SESSION["acertos"] . " questões de 10 ";
+if ($_SESSION["acertos"] >= 2 && $_SESSION["acertos"] <= 4) {
+    $txtActs = "Você acertou " . $_SESSION["acertos"] . " questões, " . $porcentagem_acertos . "% do quiz, ";
 }
 
-if ($_SESSION["acertos"] >= 8 && $_SESSION["acertos"] <= 10) {
-    $txtActs = "Parabéns!! Você acertou " . $_SESSION["acertos"] . " questões de 10 ";
+if ($_SESSION["acertos"] == 5 || $_SESSION["acertos"] == 6) {
+    $txtActs = "Olhe só! Você acertou " . $_SESSION["acertos"] . " questões, " . $porcentagem_acertos . "% do quiz, ";
+}
+
+if ($_SESSION["acertos"] == 7 || $_SESSION["acertos"] == 8) {
+    $txtActs = "Uau! Você acertou " . $_SESSION["acertos"] . " questões, " . $porcentagem_acertos . "% do quiz, ";
+}
+
+if ($_SESSION["acertos"] == 9 || $_SESSION["acertos"] == 10) {
+    $txtActs = "PARABÉNS!! ARRASOU!! Você acertou " . $_SESSION["acertos"] . " questões, " . $porcentagem_acertos . "% do quiz, ";
 }
 
 //Mensagens para pontos:
 
 if ($_SESSION["ponto"] == 0) {
-    $txtPts = "e não ganhou nenhum ponto. Mas você pode tentar novamente!";
+    $txtPts = "e não acumulou nenhum ponto! Você não é Nada Swifter, claramente não conhece a Taylor.";
     echo '<img src= https://media.tenor.com/PV1OfFaBTxEAAAAM/taylorswift-tears.gif';
 }
 
-if ($_SESSION["ponto"] >= 100 && $_SESSION["ponto"] <= 400) {
-    $txtPts = "e acumulou " . $_SESSION["ponto"] . " pontos. Você foi bem, mas pode se dar melhor se tentar novamente!";
+if ($_SESSION["ponto"] == 100) {
+    $txtPts = "e acumulou apenas 100 pontos! Você não é Nada Swifter, claramente não conhece a Taylor.";
+    echo '<img src= https://media.tenor.com/PV1OfFaBTxEAAAAM/taylorswift-tears.gif';
+}
+
+if ($_SESSION["ponto"] >= 200 && $_SESSION["ponto"] <= 400) {
+    $txtPts = "e acumulou " . $_SESSION["ponto"] . " pontos. Você é uma Swifter Modinha! Você pode até conhecer a Taylor, mas só sabe das músicas mais famosas dela.";
     echo '<img src= https://media.tenor.com/R9SJc2CDhXgAAAAM/taylor-swift.gif';
 }
 
-if ($_SESSION["ponto"] >= 500 && $_SESSION["ponto"] <= 700) {
-    $txtPts = "e acumulou " . $_SESSION["ponto"] . " pontos. Você foi ótimo(a)!";
+if ($_SESSION["ponto"] == 500 || $_SESSION["ponto"] == 600) {
+    $txtPts = "e acumulou " . $_SESSION["ponto"] . " pontos. Você é uma Baby Swifter! Chegou no fandom agora e gosta da Taylor, mas ainda há muito o que aprender.";
     echo '<img src= https://media.tenor.com/Tnon_GhnnKUAAAAM/sassy-pretty.gif';
 }
 
-if ($_SESSION["ponto"] >= 800 && $_SESSION["ponto"] <= 1000) {
-    $txtPts = "e acumulou " . $_SESSION["ponto"] . " pontos. Você é um(a) verdadeiro(a) Swifter!";
+if ($_SESSION["ponto"] == 700 || $_SESSION["ponto"] == 800) {
+    $txtPts = "e acumulou " . $_SESSION["ponto"] . "pontos. Você é uma Swifter Real Oficial! Já está no fandom há um bom tempo e sabe muito.";
+}
+
+if ($_SESSION["ponto"] == 900 || $_SESSION["ponto"] == 1000) {
+    $txtPts = "e acumulou " . $_SESSION["ponto"] . " pontos! Você é um(a) Swifter Veterano(a)! Sabe tudo sobre a Loirinha!";
     echo '<img src= https://media.tenor.com/fR44vhC3ApUAAAAC/taylor-swift-taylor.gif';
 }
 ?>
@@ -98,7 +114,6 @@ if ($_SESSION["ponto"] >= 800 && $_SESSION["ponto"] <= 1000) {
                 <div class="resultado">
                     <?php echo $txtActs?>
                     <?php echo $txtPts?>
-                    <?php echo $txtPctg = "Ficando com " . $porcentagem_acertos . " % de acertos no quiz!!! "?>
                 </div>
             </section>
     </section>
