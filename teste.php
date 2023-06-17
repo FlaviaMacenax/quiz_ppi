@@ -65,15 +65,14 @@ $foirespondido=false;
                     if($alternativa==$posicaoResposta){
                         $ponto = $_POST["ponto"]+100;
                         $acertos = $_POST["acertos"]+1;
-                            return "Parabéns, você acertou a questão e ganhou +100 pontos 🥳 <br>". '<img src="https://media4.giphy.com/media/xT0Cyhi8GCSU91PvtC/giphy.gif?cid=6c09b952ram70wcw7bxvcekqje5hytxmpt2picgwugyeldod&ep=v1_gifs_search&rid=giphy.gif&ct=g">';
+                            return "Parabéns, você acertou a questão e ganhou +100 pontos 🥳 <br>";
                     }else{
                         $ponto= $_POST["ponto"];
-                            return "Que pena, você errou e não marcou pontos ☹️<br>". '<img src="https://i.pinimg.com/originals/a0/38/ab/a038ab5d7cd581a92947d7aee5821090.gif">';}
+                            return "Que pena, você errou e não marcou pontos ☹️<br>";}
             }
 
     if(isset($_POST["proxima"])){
         $valor = $_POST["valor"]+1;
-        $ponto = $_POST["ponto"];
     }
     //Estrutura para mostrar se a questão marcada foi a correta ou errada, caso o usuário selecione o botão responder
         if(isset($_POST["responder"])){
