@@ -4,7 +4,7 @@ session_start();
 
 $txtActs = "";
 $txtPts = "";
-$porcentagem_acertos = ((($_SESSION["acertos"])*100))/10;
+$porcentagem_acertos = (($_SESSION["acertos"])*100)/10;
 
 // Mensagens para acertos:
 
