@@ -13,7 +13,7 @@ if ($_SESSION["acertos"] == 0) {
 }
 
 if ($_SESSION["acertos"] == 1) {
-    $txtActs = "Que pena! Você acertou apenas 1 questão de 10," . $porcentagem_acertos . "% do quiz, ";
+    $txtActs = "Que pena! Você acertou apenas 1 questão de 10, " . $porcentagem_acertos . "% do quiz, ";
 }
 
 if ($_SESSION["acertos"] >= 2 && $_SESSION["acertos"] <= 4) {
