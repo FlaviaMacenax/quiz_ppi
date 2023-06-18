@@ -39,7 +39,7 @@
     das perguntas-->
 
         <!--Aúdio da página inicial-->
-        <audio src="audio/shakeitofff.mp3" loop autoplay controls></audio> 
+        <audio src="audio/shakeitoff.mp3" loop autoplay controls></audio> 
 
         <!--Cabeçalho-->
         <header class="container">

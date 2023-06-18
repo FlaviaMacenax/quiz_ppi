@@ -17,6 +17,8 @@
     <title>Como jogar?</title>
 </head>
 <body>
+
+    <audio src="audio/cardigan.mp3" loop autoplay ></audio> 
      <!--Página de instruções com informações de como funciona e como jogar o quiz-->
         <!-- Cabeçalho -->
         <header class="container">
