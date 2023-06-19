@@ -37,7 +37,7 @@ if ($_SESSION["acertos"] == 9 || $_SESSION["acertos"] == 10) {
 
 if ($_SESSION["ponto"] == 0) {
     $txtPts = "e não acumulou nenhum ponto! Você não é Nada Swifter, claramente não conhece a Taylor.";
-    $gif = '<img src= "i"magens/resultado1.gif" class= "image" ';
+    $gif = '<img src= "imagens/resultado1.gif" class= "image" ';
 }
 
 if ($_SESSION["ponto"] == 100) {
