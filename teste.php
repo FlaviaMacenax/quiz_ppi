@@ -169,7 +169,7 @@ $foirespondido=false;
     <!--Cabeçalho-->
     <header class="container">
         <div class="logo">
-            <img src="imagens/logo.png" width="250" height="auto" alt="logo do quiz">
+            <img src="imagens/logo.png" width="275" height="auto" alt="logo do quiz">
         </div>
     </header>
 
