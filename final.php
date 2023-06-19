@@ -88,7 +88,7 @@ if ($_SESSION["ponto"] == 900 || $_SESSION["ponto"] == 1000) {
     
 <!-- Áudios -->
 <audio src="audio/palmas.mp3" autoplay></audio>
-<audio src="audio/TheGreatWar.mp3" autoplay loop controls></audio>
+<audio src="audio/TheGreatWar.mp3" autoplay loop></audio>
 
  <!--Página final. Exibe o número de pontos e de acertos do jogador-->
     <!-- Cabeçalho -->
