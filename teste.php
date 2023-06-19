@@ -54,7 +54,7 @@ $foirespondido=false;
             array ("Folklore", "Red", "1989", "Midnights"),
             array ("Taylor swift tour", "Evermore tour", "The eras tour", "Midnights tour"),
             array ("10", "22", "13", "7"),
-            array ("7", "8", "11", "12")
+            array ("3", "5", "10", "11")
         );
 
     //Array das respostas corretas

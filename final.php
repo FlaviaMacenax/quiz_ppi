@@ -37,32 +37,32 @@ if ($_SESSION["acertos"] == 9 || $_SESSION["acertos"] == 10) {
 
 if ($_SESSION["ponto"] == 0) {
     $txtPts = "e não acumulou nenhum ponto! Você não é Nada Swifter, claramente não conhece a Taylor.";
-    $gif = '<img src= https://media.tenor.com/PV1OfFaBTxEAAAAM/taylorswift-tears.gif';
+    $gif = '<img src= imagens/resultado1.gif';
 }
 
 if ($_SESSION["ponto"] == 100) {
     $txtPts = "e acumulou apenas 100 pontos! Você não é Nada Swifter, claramente não conhece a Taylor.";
-    $gif ='<img src= https://media.tenor.com/PV1OfFaBTxEAAAAM/taylorswift-tears.gif';
+    $gif ='<img src= imagens/resultado2.gif';
 }
 
 if ($_SESSION["ponto"] >= 200 && $_SESSION["ponto"] <= 400) {
     $txtPts = "e acumulou " . $_SESSION["ponto"] . " pontos. Você é uma Swifter Modinha! Você pode até conhecer a Taylor, mas só sabe das músicas mais famosas dela.";
-    $gif ='<img src= https://media.tenor.com/R9SJc2CDhXgAAAAM/taylor-swift.gif';
+    $gif ='<img src= imagens/resultado3.gif';
 }
 
 if ($_SESSION["ponto"] == 500 || $_SESSION["ponto"] == 600) {
     $txtPts = "e acumulou " . $_SESSION["ponto"] . " pontos. Você é uma Baby Swifter! Chegou no fandom agora e gosta da Taylor, mas ainda há muito o que aprender.";
-    $gif = '<img src= https://media.tenor.com/Tnon_GhnnKUAAAAM/sassy-pretty.gif';
+    $gif = '<img src= imagens/resultado4.gif';
 }
 
 if ($_SESSION["ponto"] == 700 || $_SESSION["ponto"] == 800) {
     $txtPts = "e acumulou " . $_SESSION["ponto"] . "pontos. Você é uma Swifter Real Oficial! Já está no fandom há um bom tempo e sabe muito.";
-    $gif = '<img src= https://www.icegif.com/wp-content/uploads/2023/04/icegif-163.gif';
+    $gif = '<img src= imagens/resultado5.gif';
 }
 
 if ($_SESSION["ponto"] == 900 || $_SESSION["ponto"] == 1000) {
     $txtPts = "e acumulou " . $_SESSION["ponto"] . " pontos! Você é um(a) Swifter Veterano(a)! Sabe tudo sobre a Loirinha!";
-    $gif = '<img src= https://media.tenor.com/fR44vhC3ApUAAAAC/taylor-swift-taylor.gif';
+    $gif = '<img src= imagens/resultado6gif';
 }
 ?>
 
@@ -117,7 +117,7 @@ if ($_SESSION["ponto"] == 900 || $_SESSION["ponto"] == 1000) {
                 <div class="final">
                     <h2>Você chegou ao final do quiz, <?php echo $_SESSION["nomeJogador"]. "!";?></h2>
                 </div>
-    
+
                 <div class="resultado">
                     <?php echo $txtActs?>
                     <?php echo $txtPts?>
