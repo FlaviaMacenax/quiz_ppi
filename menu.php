@@ -40,12 +40,12 @@
     das perguntas-->
 
         <!--Aúdio da página inicial-->
-        <audio src="audio/shakeitoff.mp3" loop autoplay></audio> 
+        <audio src="audio/shakeitoff.mp3" loop autoplay controls></audio> 
 
         <!--Cabeçalho-->
         <header class="container">
             <div class="logo">
-                <img src="imagens/logo.png" width="275" height="auto" alt="logo do quiz">
+                <img src="imagens/logo.png" width="300" height="auto" alt="logo do quiz">
             </div> 
         </header>
 

@@ -10,58 +10,58 @@ $porcentagem_acertos = (($_SESSION["acertos"])*100)/10;
 // Mensagens para acertos:
 
 if ($_SESSION["acertos"] == 0) {
-    $txtActs = "Que pena! Você não acertou nenhuma das questões, ". $porcentagem_acertos . "% do quiz, ";
+    $txtActs = "Que pena! Você não acertou nenhuma das questões e conseguiu acertar ". $porcentagem_acertos . "% do quiz. ";
 }
 
 if ($_SESSION["acertos"] == 1) {
-    $txtActs = "Que pena! Você acertou apenas 1 questão de 10, " . $porcentagem_acertos . "% do quiz, ";
+    $txtActs = "Que pena! Você acertou apenas 1 questão de 10 e conseguiu acertar " . $porcentagem_acertos . "% do quiz. ";
 }
 
 if ($_SESSION["acertos"] >= 2 && $_SESSION["acertos"] <= 4) {
-    $txtActs = "Você acertou " . $_SESSION["acertos"] . " questões, " . $porcentagem_acertos . "% do quiz, ";
+    $txtActs = "Olha só! Você acertou " . $_SESSION["acertos"] . " questões e conseguiu acertar " . $porcentagem_acertos . "% do quiz. ";
 }
 
 if ($_SESSION["acertos"] == 5 || $_SESSION["acertos"] == 6) {
-    $txtActs = "Olhe só! Você acertou " . $_SESSION["acertos"] . " questões, " . $porcentagem_acertos . "% do quiz, ";
+    $txtActs = "Muito bem! Você acertou " . $_SESSION["acertos"] . " questões e conseguiu acertar " . $porcentagem_acertos . "% do quiz. ";
 }
 
 if ($_SESSION["acertos"] == 7 || $_SESSION["acertos"] == 8) {
-    $txtActs = "Uau! Você acertou " . $_SESSION["acertos"] . " questões, " . $porcentagem_acertos . "% do quiz, ";
+    $txtActs = "Uau! Você acertou " . $_SESSION["acertos"] . " questões e conseguiu acertar " . $porcentagem_acertos . "% do quiz. ";
 }
 
 if ($_SESSION["acertos"] == 9 || $_SESSION["acertos"] == 10) {
-    $txtActs = "PARABÉNS!! ARRASOU!! Você acertou " . $_SESSION["acertos"] . " questões, " . $porcentagem_acertos . "% do quiz, ";
+    $txtActs = "PARABÉNS!! ARRASOU!! Você acertou " . $_SESSION["acertos"] . " questões e conseguiu acertar " . $porcentagem_acertos . "% do quiz. ";
 }
 
 //Mensagens para pontos:
 
 if ($_SESSION["ponto"] == 0) {
-    $txtPts = "e não acumulou nenhum ponto! Você não é Nada Swifter, claramente não conhece a Taylor.";
+    $txtPts = "Você não acumulou nenhum ponto! Você não é Nada Swifter, claramente não conhece a Taylor.";
     $gif = '<img src= "imagens/resultado1.gif" class= "image" ';
 }
 
 if ($_SESSION["ponto"] == 100) {
-    $txtPts = "e acumulou apenas 100 pontos! Você não é Nada Swifter, claramente não conhece a Taylor.";
+    $txtPts = "Você acumulou apenas 100 pontos! Você não é Nada Swifter, claramente não conhece a Taylor.";
     $gif ='<img src= "imagens/resultado2.gif" class= "image" ';
 }
 
 if ($_SESSION["ponto"] >= 200 && $_SESSION["ponto"] <= 400) {
-    $txtPts = "e acumulou " . $_SESSION["ponto"] . " pontos. Você é uma Swifter Modinha! Você pode até conhecer a Taylor, mas só sabe das músicas mais famosas dela.";
+    $txtPts = "Você acumulou " . $_SESSION["ponto"] . " pontos. Você é um(a) Swifter Modinha! Você pode até conhecer a Taylor, mas só sabe das músicas mais famosas dela.";
     $gif ='<img src= "imagens/resultado3.gif" class= "image" ';
 }
 
 if ($_SESSION["ponto"] == 500 || $_SESSION["ponto"] == 600) {
-    $txtPts = "e acumulou " . $_SESSION["ponto"] . " pontos. Você é uma Baby Swifter! Chegou no fandom agora e gosta da Taylor, mas ainda há muito o que aprender.";
+    $txtPts = "Você acumulou " . $_SESSION["ponto"] . " pontos. Você é um(a) Baby Swifter! Chegou no fandom agora e gosta da Taylor, mas ainda há muito o que aprender.";
     $gif = '<img src= "imagens/resultado4.gif" class= "image" ';
 }
 
 if ($_SESSION["ponto"] == 700 || $_SESSION["ponto"] == 800) {
-    $txtPts = "e acumulou " . $_SESSION["ponto"] . "pontos. Você é uma Swifter Real Oficial! Já está no fandom há um bom tempo e sabe muito.";
+    $txtPts = "Você acumulou " . $_SESSION["ponto"] . " pontos. Você é um(a) Swifter Real Oficial! Já está no fandom há um bom tempo e sabe muito.";
     $gif = '<img src= "imagens/resultado5.gif" class= "image" ';
 }
 
 if ($_SESSION["ponto"] == 900 || $_SESSION["ponto"] == 1000) {
-    $txtPts = "e acumulou " . $_SESSION["ponto"] . " pontos! Você é um(a) Swifter Veterano(a)! Sabe tudo sobre a Loirinha!";
+    $txtPts = "Você acumulou " . $_SESSION["ponto"] . " pontos! Você é um(a) Swifter Veterano(a)! Sabe tudo sobre a Loirinha!";
     $gif = '<img src= "imagens/resultado6.gif" class= "image" ';
 }
 ?>
@@ -88,26 +88,23 @@ if ($_SESSION["ponto"] == 900 || $_SESSION["ponto"] == 1000) {
     
 <!-- Áudios -->
 <audio src="audio/palmas.mp3" autoplay></audio>
-<audio src="audio/TheGreatWar.mp3" autoplay loop></audio>
+<audio src="audio/TheGreatWar.mp3" autoplay loop controls></audio>
 
- <!--Páginafinal. Exibe o número de pontos e de acertos do jogador-->
+ <!--Página final. Exibe o número de pontos e de acertos do jogador-->
     <!-- Cabeçalho -->
     <header class="container">
       <div class="logo">
-        <img src="imagens/logo.png" width="200" height="106" alt="logo do quiz">
+        <img src="imagens/logo.png" width="275" height="auto" alt="logo do quiz">
       </div> 
     </header>
 
-    <div class="row">
         <!-- Botão reiniciar-->
-        <div class="botoes contpag col-sm-6">
+        <div class="botoes contpag">
             <a href='menu.php'><button>Reiniciar jogo</button></a>
         </div> 
-        <div class=" gif col-sm-6">
-        <!--Cada faixa de acertos exibe um gif diferente -->
-        <?php echo $gif?>
+            <!--Cada faixa de acertos exibe um gif diferente -->
+            <?php echo $gif?>
         </div>
-    </div>
 
         <section class="secao-final">
             <!-- Foto final-->
@@ -120,9 +117,10 @@ if ($_SESSION["ponto"] == 900 || $_SESSION["ponto"] == 1000) {
                 <div class="final">
                     <h2>Você chegou ao final do quiz, <?php echo $_SESSION["nomeJogador"]. "!";?></h2>
                 </div>
-
                 <div class="resultado">
                     <?php echo $txtActs?>
+                </div>
+                <div class="resultado">
                     <?php echo $txtPts?>
                 </div>
             </section>
