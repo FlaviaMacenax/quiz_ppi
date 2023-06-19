@@ -1,5 +1,5 @@
 <?php
-
+//Iniciando a sessão para pegar dados da página
 session_start();
 
 $txtActs = "";
@@ -37,32 +37,32 @@ if ($_SESSION["acertos"] == 9 || $_SESSION["acertos"] == 10) {
 
 if ($_SESSION["ponto"] == 0) {
     $txtPts = "e não acumulou nenhum ponto! Você não é Nada Swifter, claramente não conhece a Taylor.";
-    $gif = '<img src= imagens/resultado1.gif';
+    $gif = '<img src= "imagens/resultado1.gif" class= "image" ';
 }
 
 if ($_SESSION["ponto"] == 100) {
     $txtPts = "e acumulou apenas 100 pontos! Você não é Nada Swifter, claramente não conhece a Taylor.";
-    $gif ='<img src= imagens/resultado2.gif';
+    $gif ='<img src= "imagens/resultado2.gif" class= "image" ';
 }
 
 if ($_SESSION["ponto"] >= 200 && $_SESSION["ponto"] <= 400) {
     $txtPts = "e acumulou " . $_SESSION["ponto"] . " pontos. Você é uma Swifter Modinha! Você pode até conhecer a Taylor, mas só sabe das músicas mais famosas dela.";
-    $gif ='<img src= imagens/resultado3.gif';
+    $gif ='<img src= "imagens/resultado3.gif" class= "image" ';
 }
 
 if ($_SESSION["ponto"] == 500 || $_SESSION["ponto"] == 600) {
     $txtPts = "e acumulou " . $_SESSION["ponto"] . " pontos. Você é uma Baby Swifter! Chegou no fandom agora e gosta da Taylor, mas ainda há muito o que aprender.";
-    $gif = '<img src= imagens/resultado4.gif';
+    $gif = '<img src= "imagens/resultado4.gif" class= "image" ';
 }
 
 if ($_SESSION["ponto"] == 700 || $_SESSION["ponto"] == 800) {
     $txtPts = "e acumulou " . $_SESSION["ponto"] . "pontos. Você é uma Swifter Real Oficial! Já está no fandom há um bom tempo e sabe muito.";
-    $gif = '<img src= imagens/resultado5.gif';
+    $gif = '<img src= "imagens/resultado5.gif" class= "image" ';
 }
 
 if ($_SESSION["ponto"] == 900 || $_SESSION["ponto"] == 1000) {
     $txtPts = "e acumulou " . $_SESSION["ponto"] . " pontos! Você é um(a) Swifter Veterano(a)! Sabe tudo sobre a Loirinha!";
-    $gif = '<img src= imagens/resultado6gif';
+    $gif = '<img src= "imagens/resultado6.gif" class= "image" ';
 }
 ?>
 
@@ -88,10 +88,7 @@ if ($_SESSION["ponto"] == 900 || $_SESSION["ponto"] == 1000) {
     
 <!-- Áudios -->
 <audio src="audio/palmas.mp3" autoplay></audio>
-<audio src="audio/TheGreatWar.mp3" autoplay loop controls></audio>
-
-<!--Cada faixa de acertos exibe um gif diferente -->
-<?php echo $gif?>
+<audio src="audio/TheGreatWar.mp3" autoplay loop></audio>
 
  <!--Páginafinal. Exibe o número de pontos e de acertos do jogador-->
     <!-- Cabeçalho -->
@@ -101,10 +98,16 @@ if ($_SESSION["ponto"] == 900 || $_SESSION["ponto"] == 1000) {
       </div> 
     </header>
 
+    <div class="row">
         <!-- Botão reiniciar-->
-        <div class="botoes contpag">
+        <div class="botoes contpag col-sm-6">
             <a href='menu.php'><button>Reiniciar jogo</button></a>
         </div> 
+        <div class=" gif col-sm-6">
+        <!--Cada faixa de acertos exibe um gif diferente -->
+        <?php echo $gif?>
+        </div>
+    </div>
 
         <section class="secao-final">
             <!-- Foto final-->

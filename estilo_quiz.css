@@ -525,3 +525,11 @@
     .footer-list p:hover{
         color: #92a2e8;
 }
+
+/*Parte dos gifs*/
+.image{
+    width: 200px;
+}
+.gif{
+    margin-left: 750px;
+}
