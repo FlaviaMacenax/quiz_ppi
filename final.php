@@ -102,7 +102,6 @@ if ($_SESSION["ponto"] == 900 || $_SESSION["ponto"] == 1000) {
         <div class="botoes contpag">
             <a href='menu.php'><button>Reiniciar jogo</button></a>
         </div> 
-        <div class="gif-resultado">
             <!--Cada faixa de acertos exibe um gif diferente -->
             <?php echo $gif?>
         </div>
