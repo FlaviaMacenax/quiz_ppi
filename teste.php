@@ -1,5 +1,5 @@
 <?php
-
+//Iniciando a sessão para pegar dados da página
 session_start();
 
 $msg="";
@@ -8,7 +8,6 @@ $ponto=0;
 $valor = 0;
 $botao = "";
 $acertos = 0;
-
 $foirespondido=false;
 
 
@@ -59,7 +58,7 @@ $foirespondido=false;
 
     //Array das respostas corretas
         $posicao = array(3, 1, 1, 2, 1, 2, 4, 3, 3, 4);
-
+    //Função responsável pela validação das respostas
             function validarResposta($alternativa, $posicaoResposta, $i){
                 global $ponto, $acertos;
                     if($alternativa==$posicaoResposta){
@@ -70,7 +69,7 @@ $foirespondido=false;
                         $ponto= $_POST["ponto"];
                             return "Que pena, você errou e não marcou pontos ☹️<br>";}
             }
-
+//Botão de passar para a próxima pergunta
     if(isset($_POST["proxima"])){
         $valor = $_POST["valor"]+1;
     }
@@ -104,9 +103,9 @@ $foirespondido=false;
             <h2 class="pontos secao-1"><i class="fa-solid fa-trophy icon"></i>
             <label>Pontos: </label><input type="text" name="ponto" value="<?php echo $ponto; ?>" readonly></h2>
         </section>
-
+    <!--Mensagem de validação-->
         <?php echo "<div class=\"valid\">", $msg ,"</div>"; ?><br>
-
+    <!--Exibição do número da pergunta e quantidade de pontos-->
         <h1 class="perg" >Pergunta <?php echo $i+1?><i class="fa-solid fa-circle-question fa-bounce inter"></i></h1>
         <h1 class="pergunta"><?php echo ($perguntas[$i])?></h1>
         <label><input type="hidden" name="valor" value="<?php echo $valor; ?>"></label>
@@ -125,6 +124,7 @@ $foirespondido=false;
             <input type="radio" id="radio-4" name="res" value="4"><label for="radio-4"><?php echo($respostas[$i][3])?></label></br>
         </div>
 
+    <!-- O esquema dos botões: se o botão responder não for clicado não passa para a próxima pergunta, caso ele for clicado o botão de próxima aparece-->
         <div class="botoes">
             <?php if(!$foirespondido){ ?>
                 <input id="responder" type="submit" name= "responder" value="Responder">
@@ -137,6 +137,7 @@ $foirespondido=false;
 
 
 <?php  
+//Quando chegar na pergunta 10 aparecerá um botão de ver o resultado do quiz
     if($valor==9){ ?>
         <div class="botoes"><a href='final.php'><button>Resultados</button></a></div>
         <?php }  
@@ -172,6 +173,7 @@ $foirespondido=false;
         </div>
     </header>
 
+<!--Chamando a função de exibir as perguntas-->
         <div class="perguntas contpag">
             <?php exibirQuestao($valor);?><br>
         </div>

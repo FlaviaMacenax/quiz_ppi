@@ -515,3 +515,7 @@
     .footer-list p:hover{
         color: #92a2e8;
 }
+
+.image{
+    width: 100px;
+}

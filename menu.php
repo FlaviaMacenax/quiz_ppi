@@ -1,4 +1,5 @@
 <?php
+//Iniciando a sessão para pegar dados da página
     session_start();
 
     $nomeJogador = "";
