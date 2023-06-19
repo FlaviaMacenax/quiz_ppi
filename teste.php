@@ -167,11 +167,12 @@ $foirespondido=false;
     
 <!--Áudio-->
 <audio src="audio/august.mp3" loop autoplay ></audio> 
+
 <!--Página de perguntas do quiz. É aqui que as perguntas e as alternativas serão exibidas-->
     <!--Cabeçalho-->
     <header class="container">
         <div class="logo">
-            <img src="imagens/logo.png" width="275" height="auto" alt="logo do quiz">
+            <img src="imagens/logo.png" width="250" height="auto" alt="logo do quiz">
         </div>
     </header>
 
