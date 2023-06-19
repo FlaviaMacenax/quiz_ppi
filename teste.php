@@ -165,6 +165,8 @@ $foirespondido=false;
 </head>
 <body>
     
+<!--Áudio-->
+<audio src="audio/august.mp3" loop autoplay ></audio> 
 <!--Página de perguntas do quiz. É aqui que as perguntas e as alternativas serão exibidas-->
     <!--Cabeçalho-->
     <header class="container">
