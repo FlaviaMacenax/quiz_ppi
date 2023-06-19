@@ -390,6 +390,7 @@
         .secao-final{
             display: flex;
             margin-top: 100px;
+            margin-left: 300px;
        }
     
         .final h2{
@@ -441,7 +442,7 @@
             width: 200px;
             margin-top: 100px;
             margin-bottom: -257px;
-            margin-left: 800px;
+            margin-left: 1100px;
 }
     
 /*Footer*/
