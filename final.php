@@ -88,10 +88,7 @@ if ($_SESSION["ponto"] == 900 || $_SESSION["ponto"] == 1000) {
     
 <!-- Áudios -->
 <audio src="audio/palmas.mp3" autoplay></audio>
-<audio src="audio/TheGreatWar.mp3" autoplay loop controls></audio>
-
-<!--Cada faixa de acertos exibe um gif diferente -->
-<?php echo $gif?>
+<audio src="audio/TheGreatWar.mp3" autoplay loop></audio>
 
  <!--Páginafinal. Exibe o número de pontos e de acertos do jogador-->
     <!-- Cabeçalho -->
@@ -99,12 +96,18 @@ if ($_SESSION["ponto"] == 900 || $_SESSION["ponto"] == 1000) {
       <div class="logo">
         <img src="imagens/logo.png" width="200" height="106" alt="logo do quiz">
       </div> 
-
     </header>
+
+    <div class="row">
         <!-- Botão reiniciar-->
-        <div class="botoes contpag">
+        <div class="botoes contpag col-sm-6">
             <a href='menu.php'><button>Reiniciar jogo</button></a>
         </div> 
+        <div class=" gif col-sm-6">
+        <!--Cada faixa de acertos exibe um gif diferente -->
+        <?php echo $gif?>
+        </div>
+    </div>
 
         <section class="secao-final">
             <!-- Foto final-->
